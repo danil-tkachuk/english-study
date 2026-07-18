@@ -169,7 +169,7 @@ nav a:hover, nav a.active {
   color: var(--accent-pink);
 }
 
-.theme-toggle, .sound-toggle {
+.theme-toggle, .sound-toggle, .lang-toggle {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   color: var(--text-primary);
@@ -180,9 +180,14 @@ nav a:hover, nav a.active {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
 }
 
-.theme-toggle:hover, .sound-toggle:hover {
+.theme-toggle:hover, .sound-toggle:hover, .lang-toggle:hover {
   background: var(--card-bg-hover);
   transform: scale(1.05);
 }
@@ -297,7 +302,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
+  height: 260px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 4px 15px var(--shadow-color);

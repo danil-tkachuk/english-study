@@ -30,23 +30,28 @@
     </div>
     
     <nav>
-      <a class="nav-link active" data-page="dashboard">Обучение</a>
-      <a class="nav-link" data-page="achievements">Достижения</a>
+      <a class="nav-link active" data-page="dashboard" data-i18n="nav_study">Обучение</a>
+      <a class="nav-link" data-page="achievements" data-i18n="nav_achievements">Достижения</a>
       
       <div class="nav-stats">
-        <div class="stat-item xp" title="Всего опыта (XP)">
+        <div class="stat-item xp" id="tooltip-xp-title">
           <svg style="width: 1.25rem; height: 1.25rem;" viewBox="0 0 24 24">
             <path fill="currentColor" d="M12 2L1 21h22L12 2zm0 4l7.53 13H4.47L12 6zm-1 6h2v4h-2v-4zm0-3h2v2h-2V9z"/>
           </svg>
           <span id="header-xp">0</span> XP
         </div>
-        <div class="stat-item streak" title="Ударный режим (дней)">
+        <div class="stat-item streak" id="tooltip-streak-title">
           <svg style="width: 1.25rem; height: 1.25rem;" viewBox="0 0 24 24">
             <path fill="currentColor" d="M12.89 3c-.1-.01-.2-.01-.3 0-1.85.12-3.83 1.63-4.5 3.39-.77 2.02.04 4.3 1.01 6.13 1.34 2.54 3.73 4.25 6.57 4.67 2.87.42 5.86-.71 7.29-3.23.94-1.65.98-3.79-.11-5.38-.17-.25-.49-.31-.73-.15-.24.16-.31.47-.16.71 1 1.45.89 3.39-.02 4.73-1.19 1.76-3.7 2.56-5.71 2.06-2.02-.5-3.69-2.22-4.32-4.22-.52-1.65-.24-3.51.74-4.94.75-1.1 2.22-2.13 3.65-1.92.51.07.82.35 1.05.74.22.37.24.78.18 1.19-.09.61-.43 1.15-.81 1.63-.58.73-1.25 1.39-1.83 2.13-.53.68-.86 1.48-.96 2.34-.03.29.17.55.46.59.29.03.55-.17.59-.46.07-.63.31-1.22.7-1.72.53-.68 1.16-1.28 1.7-1.91.5-.59 1-1.27 1.15-2.06.09-.49.07-1-.13-1.47-.21-.49-.62-.97-1.22-1.05v-.02zm.5 13.91l-.09.07a5.533 5.533 0 01-1.31.5c-.32.06-.54.37-.47.69.06.32.37.54.69.47.53-.1 1.04-.28 1.53-.53.26-.14.36-.47.22-.73-.14-.26-.47-.36-.73-.22v-.25z"/>
           </svg>
-          <span id="header-streak">0</span> дней
+          <span id="header-streak">0</span> <span data-i18n="streak_days_label">дней</span>
         </div>
       </div>
+
+      <!-- Language Switcher -->
+      <button class="lang-toggle" id="btn-lang-toggle" title="Змінити мову / Сменить язык">
+        UA
+      </button>
 
       <button class="sound-toggle" id="btn-sound-toggle" title="Включить/выключить звук">
         <svg style="width:1.25rem; height:1.25rem;" viewBox="0 0 24 24">
@@ -68,9 +73,9 @@
     <section id="dashboard-page" class="page active">
       <div class="hero-section">
         <div class="hero-text">
-          <h1>Учи английский <span>играя!</span></h1>
-          <p>Интерактивные карточки, увлекательные викторины, сборка слов по буквам и озвучка правильного произношения. Специально для школьников 10-15 лет!</p>
-          <button class="hero-btn" id="btn-hero-start">Начать изучение</button>
+          <h1 data-i18n="hero_title">Учи английский <span>играя!</span></h1>
+          <p data-i18n="hero_subtitle">Интерактивные карточки, увлекательные викторины, сборка слов по буквам и озвучка правильного произношения. Специально для школьников 10-15 лет!</p>
+          <button class="hero-btn" id="btn-hero-start" data-i18n="hero_button">Начать изучение</button>
         </div>
         <img class="hero-image" src="assets/hero.jpg" alt="Friendly robot guide learning English">
       </div>
@@ -79,7 +84,7 @@
         <svg style="width: 1.8rem; height: 1.8rem; fill: var(--accent-cyan);" viewBox="0 0 24 24">
           <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13c-3.31 0-6-2.69-6-6 0-3.31 2.69-6 6-6s6 2.69 6 6c0 3.31-2.69 6-6 6z"/>
         </svg>
-        Выбери тему для изучения
+        <span data-i18n="dashboard_title">Выбери тему для изучения</span>
       </h2>
       
       <div class="grid-topics" id="topics-container">
@@ -91,7 +96,7 @@
     <section id="study-page" class="page">
       <a class="back-btn" id="btn-study-back">
         <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-        Назад на главную
+        <span data-i18n="btn_back">Назад на главную</span>
       </a>
 
       <div class="study-header">
@@ -103,7 +108,7 @@
             <svg style="width:1.2rem; height:1.2rem;" viewBox="0 0 24 24">
               <path fill="currentColor" d="M8 5v14l11-7z"/>
             </svg>
-            Запустить тест
+            <span data-i18n="btn_start_quiz">Запустить тест</span>
           </button>
         </div>
       </div>
@@ -119,7 +124,7 @@
               <div class="card-image-placeholder" id="card-emoji">☀️</div>
               <h2 class="card-word" id="card-english-word">Summer</h2>
               <div class="card-pronunciation" id="card-ipa">[ˈsʌmər]</div>
-              <div class="card-hint">Кликни, чтобы перевернуть карточку 🔄</div>
+              <div class="card-hint" data-i18n="card_hint_front">Кликни, чтобы перевернуть карточку 🔄</div>
             </div>
 
             <!-- Back Card Face -->
@@ -127,7 +132,7 @@
               <h2 class="card-translation" id="card-russian-translation">Лето</h2>
               <p class="card-example" id="card-english-example">"Summer is the hottest season of the year."</p>
               <p class="card-example-translation" id="card-russian-example">"Лето — самое жаркое время года."</p>
-              <div class="card-hint">Кликни, чтобы перевернуть обратно 🔄</div>
+              <div class="card-hint" data-i18n="card_hint_back">Кликни, чтобы перевернуть обратно 🔄</div>
             </div>
           </div>
         </div>
@@ -180,7 +185,7 @@
           <!-- Scrambled letter buttons -->
         </div>
         <div class="spelling-control-buttons">
-          <button class="spell-ctrl-btn" id="btn-spell-clear">Очистить</button>
+          <button class="spell-ctrl-btn" id="btn-spell-clear" data-i18n="btn_clear">Очистить</button>
         </div>
       </div>
 
@@ -201,21 +206,21 @@
         <div class="results-stats-row">
           <div class="r-stat-box accuracy">
             <span class="r-stat-value" id="results-accuracy">85%</span>
-            <span class="r-stat-label">Точность</span>
+            <span class="r-stat-label" data-i18n="results_accuracy_label">Точность</span>
           </div>
           <div class="r-stat-box xp-earned">
             <span class="r-stat-value" id="results-xp">+80</span>
-            <span class="r-stat-label">Опыт XP</span>
+            <span class="r-stat-label" data-i18n="results_xp_label">Опыт XP</span>
           </div>
           <div class="r-stat-box time-taken">
             <span class="r-stat-value" id="results-time">0:45</span>
-            <span class="r-stat-label">Время</span>
+            <span class="r-stat-label" data-i18n="results_time_label">Время</span>
           </div>
         </div>
 
         <div class="results-actions">
-          <button class="results-btn" id="btn-results-home">На главную</button>
-          <button class="results-btn primary" id="btn-results-retry">Повторить тест</button>
+          <button class="results-btn" id="btn-results-home" data-i18n="btn_results_home">На главную</button>
+          <button class="results-btn primary" id="btn-results-retry" data-i18n="btn_results_retry">Повторить тест</button>
         </div>
       </div>
     </section>
@@ -226,30 +231,30 @@
         <svg style="width: 1.8rem; height: 1.8rem; fill: var(--accent-purple);" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
         </svg>
-        Твой профиль и достижения
+        <span data-i18n="achievements_title">Твой профиль и достижения</span>
       </h2>
 
       <div class="achievements-stats">
         <div class="ach-stat-card">
           <span class="ach-stat-value" id="stats-total-xp">0</span>
-          <span class="ach-stat-label">Очки Опыта (XP)</span>
+          <span class="ach-stat-label" data-i18n="stats_xp_label">Очки Опыта (XP)</span>
         </div>
         <div class="ach-stat-card">
           <span class="ach-stat-value" id="stats-quizzes-completed">0</span>
-          <span class="ach-stat-label">Пройдено тестов</span>
+          <span class="ach-stat-label" data-i18n="stats_quizzes_label">Пройдено тестов</span>
         </div>
         <div class="ach-stat-card">
           <span class="ach-stat-value" id="stats-accuracy-avg">0%</span>
-          <span class="ach-stat-label">Средняя точность</span>
+          <span class="ach-stat-label" data-i18n="stats_accuracy_label">Средняя точность</span>
         </div>
         <div class="ach-stat-card">
           <span class="ach-stat-value" id="stats-streak-days">0</span>
-          <span class="ach-stat-label">Ударные дни</span>
+          <span class="ach-stat-label" data-i18n="stats_streak_label">Ударные дни</span>
         </div>
       </div>
 
       <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 1.25rem;">
-        Награды и Кубки
+        <span data-i18n="achievements_subtitle">Награды и Кубки</span>
       </h3>
 
       <div class="achievements-grid" id="achievements-grid-container">
@@ -266,8 +271,8 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 LingoKids. Учи английский язык в удовольствие!</p>
-    <p>Создано специально для детей и подростков от 10 до 15 лет.</p>
+    <p data-i18n="footer_copy">&copy; 2026 LingoKids. Учи английский язык в удовольствие!</p>
+    <p data-i18n="footer_desc">Создано специально для детей и подростков от 10 до 15 лет.</p>
   </footer>
 
   <script src="app.js"></script>
