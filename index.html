@@ -31,6 +31,7 @@
     
     <nav>
       <a class="nav-link active" data-page="dashboard" data-i18n="nav_study">Обучение</a>
+      <a class="nav-link" data-page="dictionary" data-i18n="nav_dictionary">Мой словарь</a>
       <a class="nav-link" data-page="achievements" data-i18n="nav_achievements">Достижения</a>
       
       <div class="nav-stats">
@@ -222,6 +223,45 @@
           <button class="results-btn" id="btn-results-home" data-i18n="btn_results_home">На главную</button>
           <button class="results-btn primary" id="btn-results-retry" data-i18n="btn_results_retry">Повторить тест</button>
         </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: PERSONAL DICTIONARY -->
+    <section id="dictionary-page" class="page">
+      <h2 class="section-title">
+        <svg style="width: 1.8rem; height: 1.8rem; fill: var(--accent-cyan);" viewBox="0 0 24 24">
+          <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+        </svg>
+        <span data-i18n="dict_title">Мій особистий словник</span>
+      </h2>
+
+      <!-- Add Word Box -->
+      <div class="dict-add-box">
+        <h3 data-i18n="dict_add_new">Додати нове слово</h3>
+        <form id="dict-add-form" class="dict-form">
+          <div class="form-group">
+            <input type="text" id="dict-input-word" placeholder="English word..." required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input type="text" id="dict-input-trans" placeholder="Переклад..." required autocomplete="off">
+          </div>
+          <button type="submit" class="hero-btn" data-i18n="dict_btn_add">Додати</button>
+        </form>
+      </div>
+
+      <!-- Filter / Counter Row -->
+      <div class="dict-filter-row">
+        <div class="dict-counter">
+          <span data-i18n="dict_total_words">Всього слів:</span> <strong id="dict-words-count-display">0</strong>
+        </div>
+        <div class="dict-search">
+          <input type="text" id="dict-search-input" placeholder="Пошук слів..." autocomplete="off">
+        </div>
+      </div>
+
+      <!-- Word List Grid -->
+      <div class="dict-list" id="dict-words-container">
+        <!-- Rendered dynamically -->
       </div>
     </section>
 

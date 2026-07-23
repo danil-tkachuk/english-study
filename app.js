@@ -2,6 +2,7 @@
 const I18N = {
   ru: {
     nav_study: "Обучение",
+    nav_dictionary: "Мой словарь",
     nav_achievements: "Достижения",
     streak_days_label: "дней",
     hero_title: "Учи английский <span>играя!</span>",
@@ -50,18 +51,30 @@ const I18N = {
     results_try_title: "Хорошая попытка!",
     results_try_msg: "Еще немного тренировки, и всё получится на отлично! Попробуй еще раз.",
     
+    // Personal Dictionary RU strings
+    dict_title: "Мой личный словарь",
+    dict_add_new: "Добавить новое слово в словарь",
+    dict_btn_add: "Добавить",
+    dict_total_words: "Всего слов:",
+    dict_search_placeholder: "Поиск слов...",
+    dict_empty_message: "Твой личный словарь пуст! Добавь свои первые слова сверху. 📘",
+    dict_toast_added: "Слово добавлено в словарь!",
+    dict_toast_deleted: "Слово удалено из словаря!",
+    dict_toast_exists: "Это слово уже есть в твоем словаре!",
+    
     // Header labels
     lang_btn_text: "UA"
   },
   ua: {
     nav_study: "Навчання",
+    nav_dictionary: "Мій словник",
     nav_achievements: "Досягнення",
     streak_days_label: "днів",
     hero_title: "Вчи англійську <span>граючи!</span>",
     hero_subtitle: "Інтерактивні картки, захоплюючі вікторини, складання слів за буквами та озвучка правильної вимови. Спеціально для школярів 10-15 років!",
     hero_button: "Почати вивчення",
     dashboard_title: "Обери тему для вивчення",
-    btn_back: "Назад на головну",
+    btn_back: "Назад на главную",
     btn_start_quiz: "Запустити тест",
     card_hint_front: "Клікни, щоб перевернути картку 🔄",
     card_hint_back: "Клікни, щоб перевернути назад 🔄",
@@ -102,6 +115,17 @@ const I18N = {
     results_good_msg: "Ти показав чудовий результат. Впевнено йдеш вперед!",
     results_try_title: "Хороша спроба!",
     results_try_msg: "Ще трохи тренувань, і все вийде на відмінно! Спробуй ще раз.",
+    
+    // Personal Dictionary UA strings
+    dict_title: "Мій особистий словник",
+    dict_add_new: "Додати нове слово до словника",
+    dict_btn_add: "Додати",
+    dict_total_words: "Всього слів:",
+    dict_search_placeholder: "Пошук слів...",
+    dict_empty_message: "Твій особистий словник порожній! Додай свої перші слова зверху. 📘",
+    dict_toast_added: "Слово додано до словника!",
+    dict_toast_deleted: "Слово видалено зі словника!",
+    dict_toast_exists: "Це слово вже є у твоєму словнику!",
     
     // Header labels
     lang_btn_text: "RU"
@@ -191,7 +215,7 @@ const TOPICS_DATA = [
     color: "#f59e0b",
     words: [
       { word: "Photography", ipa: "[fəˈtɑːɡrəfi]", translation: { ru: "Фотография", ua: "Фотографія" }, emoji: "📷", example: "Photography is the hobby of taking pictures.", exampleTranslation: { ru: "Фотография — это увлечение делать снимки.", ua: "Фотографія — це захоплення робити знімки." } },
-      { word: "Adventure", ipa: "[ədˈventʃər]", translation: { ru: "Приключение", ua: "Пригода" }, emoji: "🗺️", example: "Reading books takes you on a great adventure.", exampleTranslation: { ru: "Чтение книг отправляет тебя в великое приключение.", ua: "Читання книг відправляє тебе у велику пригоду." } },
+      { word: "Adventure", ipa: "[ədˈventʃər]", translation: { ru: "Приключение", ua: "Пригода" }, emoji: "🗺️", example: "Reading books takes you on a great adventure.", exampleTranslation: { ru: "Чнение книг отправляет тебя в великое приключение.", ua: "Читання книг відправляє тебе у велику пригоду." } },
       { word: "Cycling", ipa: "[ˈsaɪklɪŋ]", translation: { ru: "Велоспорт", ua: "Велоспорт" }, emoji: "🚴", example: "We go cycling in the park every Sunday.", exampleTranslation: { ru: "Каждое воскресенье мы катаемся на велосипедах в парке.", ua: "Щонеділі ми катаємося на велосипедах у парку." } },
       { word: "Painting", ipa: "[ˈpeɪntɪŋ]", translation: { ru: "Живопись", ua: "Живопис / Малювання" }, emoji: "🎨", example: "Watercolor painting requires patience.", exampleTranslation: { ru: "Рисование акварелью требует терпения.", ua: "Малювання аквареллю вимагає терпіння." } },
       { word: "Travel", ipa: "[ˈtrævl]", translation: { ru: "Путешествие", ua: "Подорож / Подорожувати" }, emoji: "✈️", example: "They plan to travel across Europe.", exampleTranslation: { ru: "Они планируют путешествовать по Европе.", ua: "Вони планують подорожувати Європою." } },
@@ -216,6 +240,64 @@ const TOPICS_DATA = [
       { word: "Geometry", ipa: "[dʒiˈɑːmətri]", translation: { ru: "Геометрия", ua: "Геометрія" }, emoji: "📐", example: "Geometry deals with shapes and angles.", exampleTranslation: { ru: "Геометрия изучает фигуры и углы.", ua: "Геометрія вивчає фігури та кути." } },
       { word: "Knowledge", ipa: "[ˈnɑːlɪdʒ]", translation: { ru: "Знания / Знание", ua: "Знання / Знання" }, emoji: "🧠", example: "Reading books is a way to gain knowledge.", exampleTranslation: { ru: "Чтение книг — способ получить знания.", ua: "Читання книг — спосіб отримати знання." } },
       { word: "Notebook", ipa: "[ˈnəʊtbʊk]", translation: { ru: "Тетрадь", ua: "Зошит" }, emoji: "📓", example: "Write your homework in your notebook.", exampleTranslation: { ru: "Запиши домашнее задание в тетрадь.", ua: "Запиши домашнє завдання в зошит." } }
+    ]
+  },
+  {
+    id: "traits",
+    title: { ru: "Черты характера", ua: "Риси характеру" },
+    description: { ru: "Слова, описывающие личность и поведение людей.", ua: "Слова, що описують особистість та поведінку людей." },
+    difficulty: "Intermediate",
+    icon: `<svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>`,
+    color: "#eab308",
+    words: [
+      { word: "friendly", ipa: "[ˈfrendli]", translation: { ru: "Дружелюбный", ua: "Дружелюбний" }, emoji: "🤝", example: "Our new classmate is very friendly.", exampleTranslation: { ru: "Наш новый одноклассник очень дружелюбный.", ua: "Наш новий однокласник дуже дружелюбний." } },
+      { word: "unfriendly", ipa: "[ʌnˈfrendli]", translation: { ru: "Недружелюбный", ua: "Недружелюбний" }, emoji: "😠", example: "The clerk was cold and unfriendly.", exampleTranslation: { ru: "Продавец был холодным и недружелюбным.", ua: "Продавець був холодним і недружелюбним." } },
+      { word: "shy", ipa: "[ʃaɪ]", translation: { ru: "Застенчивый", ua: "Сором'язливий" }, emoji: "🫣", example: "He is too shy to speak in public.", exampleTranslation: { ru: "Он слишком застенчивый, чтобы говорить на публике.", ua: "Він занадто сором'язливий, щоб виступати публічно." } },
+      { word: "moody", ipa: "[ˈmuːdi]", translation: { ru: "Капризный / Смена настроения", ua: "Не в настрої / Зміна настрою" }, emoji: "😒", example: "Teenagers can be moody sometimes.", exampleTranslation: { ru: "Подростки иногда могут быть капризными.", ua: "Підлітки іноді можуть бути не в настрої." } },
+      { word: "clever", ipa: "[ˈklevər]", translation: { ru: "Умный", ua: "Розумний" }, emoji: "🧠", example: "She is a clever girl who solves puzzles quickly.", exampleTranslation: { ru: "Она умная девочка, которая быстро решает головоломки.", ua: "Вона розумна дівчинка, яка швидко розгадує головоломки." } },
+      { word: "selfish", ipa: "[ˈselfɪʃ]", translation: { ru: "Эгоистичный", ua: "Егоїст" }, emoji: "🍭", example: "Don't be selfish, share your sweets!", exampleTranslation: { ru: "Не будь эгоистичным, поделись конфетами!", ua: "Не будь егоїстом, поділися цукерками!" } },
+      { word: "cheerful", ipa: "[ˈtʃɪrfl]", translation: { ru: "Жизнерадостный", ua: "Радісний" }, emoji: "😊", example: "She always has a cheerful smile on her face.", exampleTranslation: { ru: "У нее всегда жизнерадостная улыбка на лице.", ua: "У неї завжди радісна посмішка на обличчі." } },
+      { word: "lazy", ipa: "[ˈleɪzi]", translation: { ru: "Ленивый", ua: "Ледачий" }, emoji: "🦥", example: "He is too lazy to do his homework.", exampleTranslation: { ru: "Он слишком ленивый, чтобы делать домашнюю работу.", ua: "Він занадто ледачий, щоб робити домашню роботу." } },
+      { word: "stupid", ipa: "[ˈstuːpɪd]", translation: { ru: "Глупый / Неразумный", ua: "Нерозумний" }, emoji: "🤪", example: "It was a stupid mistake, ignore it.", exampleTranslation: { ru: "Это была глупая ошибка, забудь о ней.", ua: "Це була нерозумна помилка, забудь про неї." } },
+      { word: "generous", ipa: "[ˈdʒenərəs]", translation: { ru: "Щедрый", ua: "Щедрий" }, emoji: "🎁", example: "Thank you for the generous gift!", exampleTranslation: { ru: "Спасибо за щедрый подарок!", ua: "Дякую за щедрий подарунок!" } },
+      { word: "hard-working", ipa: "[ˌhɑːrd ˈwɜːrkɪŋ]", translation: { ru: "Трудолюбивый", ua: "Працьовитий" }, emoji: "🐝", example: "Hard-working students get good grades.", exampleTranslation: { ru: "Трудолюбивые ученики получают хорошие оценки.", ua: "Працьовиті учні отримують хороші оцінки." } },
+      { word: "talkative", ipa: "[ˈtɔːkətɪv]", translation: { ru: "Разговорчивый", ua: "Балакучий" }, emoji: "🗣️", example: "She is talkative and loves sharing stories.", exampleTranslation: { ru: "Она разговорчивая и обожает делиться историями.", ua: "Вона балакуча і обожнює ділитися історіями." } }
+    ]
+  },
+  {
+    id: "nextmove_sports",
+    title: { ru: "Next Move: Спорт", ua: "Next Move: Спорт" },
+    description: { ru: "Виды спорта и снаряжение из учебников Next Move (Pearson).", ua: "Види спорту та спорядження з підручників Next Move (Pearson)." },
+    difficulty: "Intermediate",
+    icon: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4-11H8V8h8v1zm-2 2H10v-1h4v1zm0 2H10v-1h4v1zm2 2H8v-1h8v1z"/></svg>`,
+    color: "#3b82f6",
+    words: [
+      { word: "gymnastics", ipa: "[dʒɪmˈnæstɪks]", translation: { ru: "гимнастика", ua: "гімнастика" }, emoji: "🤸", example: "She does gymnastics three times a week.", exampleTranslation: { ru: "Она занимается гимнастикой три раза в неделю.", ua: "Вона займається гімнастикою тричі на тиждень." } },
+      { word: "ice hockey", ipa: "[aɪs ˈhɒki]", translation: { ru: "хоккей на льду", ua: "хокей на льоду" }, emoji: "🏒", example: "Ice hockey is a popular winter sport in Canada.", exampleTranslation: { ru: "Хоккей на льду — популярный зимний спорт в Канаде.", ua: "Хокей на льоду — популярний зимовий спорт у Канаді." } },
+      { word: "archery", ipa: "[ˈɑːtʃəri]", translation: { ru: "стрельба из лука", ua: "стрільба з лука" }, emoji: "🏹", example: "Archery requires a lot of concentration.", exampleTranslation: { ru: "Стрельба из лука требует большой концентрации.", ua: "Стрільба з лука вимагає великої концентрації." } },
+      { word: "athletics", ipa: "[æθˈletɪks]", translation: { ru: "легкая атлетика", ua: "легка атлетика" }, emoji: "🏃", example: "We watched the athletics competition on TV.", exampleTranslation: { ru: "Мы смотрели соревнования по легкой атлетике по телевизору.", ua: "Ми дивилися змагання з легкої атлетики по телевізору." } },
+      { word: "snowboarding", ipa: "[ˈsnəʊbɔːdɪŋ]", translation: { ru: "сноубординг", ua: "сноубординг" }, emoji: "🏂", example: "He loves snowboarding down steep mountains.", exampleTranslation: { ru: "Он обожает кататься на сноуборде с крутых гор.", ua: "Він обожнює кататися на сноуборді з крутих гір." } },
+      { word: "judo", ipa: "[ˈdʒuːdəʊ]", translation: { ru: "дзюдо", ua: "дзюдо" }, emoji: "🥋", example: "She has a blue belt in judo.", exampleTranslation: { ru: "У нее синий пояс по дзюдо.", ua: "Вона має синій пояс з дзюдо." } },
+      { word: "skateboarding", ipa: "[ˈskeɪtbɔːdɪŋ]", translation: { ru: "скейтбординг", ua: "скейтбординг" }, emoji: "🛹", example: "He practices skateboarding tricks in the park.", exampleTranslation: { ru: "Он тренирует трюки на скейтборде в парке.", ua: "Він тренує трюки на скейтборді в парку." } },
+      { word: "mountain biking", ipa: "[ˈmaʊntən ˈbaɪkɪŋ]", translation: { ru: "горный велоспорт", ua: "гірський велоспорт" }, emoji: "🚵", example: "Mountain biking is an exciting outdoor activity.", exampleTranslation: { ru: "Горный велоспорт — увлекательное занятие на свежем воздухе.", ua: "Гірський велоспорт — захоплююче заняття на свіжому повітрі." } }
+    ]
+  },
+  {
+    id: "nextmove_house",
+    title: { ru: "Next Move: Наш дом", ua: "Next Move: Наш дім" },
+    description: { ru: "Слова об устройстве дома и комнатах из книги Next Move.", ua: "Слова про влаштування будинку та кімнати з книги Next Move." },
+    difficulty: "Intermediate",
+    icon: `<svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>`,
+    color: "#06b6d4",
+    words: [
+      { word: "attic", ipa: "[ˈætɪk]", translation: { ru: "чердак / мансарда", ua: "горище / мансарда" }, emoji: "🕸️", example: "We store old books and toys in the attic.", exampleTranslation: { ru: "Мы храним старые книги и игрушки на чердаке.", ua: "Ми зберігаємо старі книги та іграшки на горищі." } },
+      { word: "balcony", ipa: "[ˈbælkəni]", translation: { ru: "балкон", ua: "балкон" }, emoji: "🌇", example: "Our apartment has a small balcony with flowers.", exampleTranslation: { ru: "В нашей квартире есть маленький балкон с цветами.", ua: "У нашій квартирі є маленький балкон з квітами." } },
+      { word: "cellar", ipa: "[ˈselər]", translation: { ru: "подвал / погреб", ua: "підвал / льох" }, emoji: "🏺", example: "They keep homemade jam down in the cellar.", exampleTranslation: { ru: "Они держат домашнее варенье в подвале.", ua: "Вони тримають домашнє варення в підвалі." } },
+      { word: "ceiling", ipa: "[ˈsiːlɪŋ]", translation: { ru: "потолок", ua: "стеля" }, emoji: "💡", example: "There is a beautiful lamp hanging from the ceiling.", exampleTranslation: { ru: "С потолка свисает красивая лампа.", ua: "Зі стелі звисає красива лампа." } },
+      { word: "fireplace", ipa: "[ˈfaɪəpleɪs]", translation: { ru: "камин", ua: "камін" }, emoji: "🔥", example: "It is warm and cozy near the fireplace.", exampleTranslation: { ru: "Возле камина тепло и уютно.", ua: "Біля каміна тепло і затишно." } },
+      { word: "driveway", ipa: "[ˈdraɪvweɪ]", translation: { ru: "подъездная дорожка", ua: "під'їзна доріжка" }, emoji: "🚗", example: "Park the car on the driveway, please.", exampleTranslation: { ru: "Припаркуй машину на подъездной дорожке, пожалуйста.", ua: "Припаркуй машину на під'їзній доріжці, будь ласка." } },
+      { word: "patio", ipa: "[ˈpætioʊ]", translation: { ru: "внутренний дворик / патио", ua: "внутрішній дворик / патіо" }, emoji: "🏡", example: "In summer, we eat lunch outside on the patio.", exampleTranslation: { ru: "Летом мы обедаем на улице во внутреннем дворике.", ua: "Влітку ми обідаємо на вулиці у внутрішньому дворику." } },
+      { word: "roof", ipa: "[ruːf]", translation: { ru: "крыша", ua: "дах" }, emoji: "🏠", example: "Heavy rain was hitting the roof all night.", exampleTranslation: { ru: "Сильный дождь стучал по крыше всю ночь.", ua: "Сильний дощ стукав по даху всю ніч." } }
     ]
   },
   {
@@ -252,28 +334,6 @@ const TOPICS_DATA = [
       { word: "Possessive Pronouns", ipa: "[mine, yours, his, hers, ours, theirs]", translation: { ru: "Притяжательные местоимения (Чей? заменяют существительное)", ua: "Присвійні займенники (Чий? замінюють іменник)" }, emoji: "🔑", example: "This key is mine, not yours.", exampleTranslation: { ru: "Этот ключ мой, а не твой.", ua: "Цей ключ мій, а не твій." } },
       { word: "Zero Article", ipa: "[plural, uncountable, general]", translation: { ru: "Нулевой артикль (множественное число, обобщения, имена)", ua: "Нульовий артикль (множина, загальні поняття, імена)" }, emoji: "🚫", example: "I like milk. Water is essential for life.", exampleTranslation: { ru: "Я люблю молоко. Вода необходима для жизни.", ua: "Я люблю молоко. Вода необхідна для життя." } },
       { word: "Reflexive Pronouns", ipa: "[myself, yourself, himself, ourselves]", translation: { ru: "Возвратные местоимения (себя, сам, самостоятельно)", ua: "Зворотні займенники (себе, сам, самостійно)" }, emoji: "🪞", example: "He cleaned the room by himself.", exampleTranslation: { ru: "Он убрал комнату сам.", ua: "Він прибрав кімнату сам." } }
-    ]
-  },
-  {
-    id: "traits",
-    title: { ru: "Черты характера", ua: "Риси характеру" },
-    description: { ru: "Слова, описывающие личность и поведение людей.", ua: "Слова, що описують особистість та поведінку людей." },
-    difficulty: "Intermediate",
-    icon: `<svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>`,
-    color: "#eab308",
-    words: [
-      { word: "friendly", ipa: "[ˈfrendli]", translation: { ru: "Дружелюбный", ua: "Дружелюбний" }, emoji: "🤝", example: "Our new classmate is very friendly.", exampleTranslation: { ru: "Наш новый одноклассник очень дружелюбный.", ua: "Наш новий однокласник дуже дружелюбний." } },
-      { word: "unfriendly", ipa: "[ʌnˈfrendli]", translation: { ru: "Недружелюбный", ua: "Недружелюбний" }, emoji: "😠", example: "The clerk was cold and unfriendly.", exampleTranslation: { ru: "Продавец был холодным и недружелюбным.", ua: "Продавець був холодним і недружелюбним." } },
-      { word: "shy", ipa: "[ʃaɪ]", translation: { ru: "Застенчивый", ua: "Сором'язливий" }, emoji: "🫣", example: "He is too shy to speak in public.", exampleTranslation: { ru: "Он слишком застенчивый, чтобы говорить на публике.", ua: "Він занадто сором'язливий, щоб виступати публічно." } },
-      { word: "moody", ipa: "[ˈmuːdi]", translation: { ru: "Капризный / Смена настроения", ua: "Не в настрої / Зміна настрою" }, emoji: "😒", example: "Teenagers can be moody sometimes.", exampleTranslation: { ru: "Подростки иногда могут быть капризными.", ua: "Підлітки іноді можуть бути не в настрої." } },
-      { word: "clever", ipa: "[ˈklevər]", translation: { ru: "Умный", ua: "Розумний" }, emoji: "🧠", example: "She is a clever girl who solves puzzles quickly.", exampleTranslation: { ru: "Она умная девочка, которая быстро решает головоломки.", ua: "Вона розумна дівчинка, яка швидко розгадує головоломки." } },
-      { word: "selfish", ipa: "[ˈselfɪʃ]", translation: { ru: "Эгоистичный", ua: "Егоїст" }, emoji: "🍭", example: "Don't be selfish, share your sweets!", exampleTranslation: { ru: "Не будь эгоистичным, поделись конфетами!", ua: "Не будь егоїстом, поділися цукерками!" } },
-      { word: "cheerful", ipa: "[ˈtʃɪrfl]", translation: { ru: "Жизнерадостный", ua: "Радісний" }, emoji: "😊", example: "She always has a cheerful smile on her face.", exampleTranslation: { ru: "У нее всегда жизнерадостная улыбка на лице.", ua: "У неї завжди радісна посмішка на обличчі." } },
-      { word: "lazy", ipa: "[ˈleɪzi]", translation: { ru: "Ленивый", ua: "Ледачий" }, emoji: "🦥", example: "He is too lazy to do his homework.", exampleTranslation: { ru: "Он слишком ленивый, чтобы делать домашнюю работу.", ua: "Він занадто ледачий, щоб робити домашню роботу." } },
-      { word: "stupid", ipa: "[ˈstuːpɪd]", translation: { ru: "Глупый / Неразумный", ua: "Нерозумний" }, emoji: "🤪", example: "It was a stupid mistake, ignore it.", exampleTranslation: { ru: "Это была глупая ошибка, забудь о ней.", ua: "Це була нерозумна помилка, забудь про неї." } },
-      { word: "generous", ipa: "[ˈdʒenərəs]", translation: { ru: "Щедрый", ua: "Щедрий" }, emoji: "🎁", example: "Thank you for the generous gift!", exampleTranslation: { ru: "Спасибо за щедрый подарок!", ua: "Дякую за щедрий подарунок!" } },
-      { word: "hard-working", ipa: "[ˌhɑːrd ˈwɜːrkɪŋ]", translation: { ru: "Трудолюбивый", ua: "Працьовитий" }, emoji: "🐝", example: "Hard-working students get good grades.", exampleTranslation: { ru: "Трудолюбивые ученики получают хорошие оценки.", ua: "Працьовиті учні отримують хороші оцінки." } },
-      { word: "talkative", ipa: "[ˈtɔːkətɪv]", translation: { ru: "Разговорчивый", ua: "Балакучий" }, emoji: "🗣️", example: "She is talkative and loves sharing stories.", exampleTranslation: { ru: "Она разговорчивая и обожает делиться историями.", ua: "Вона балакуча і обожнює ділитися історіями." } }
     ]
   }
 ];
@@ -604,6 +664,168 @@ const QUIZZES_DATA = {
       answer: "NOTEBOOK"
     }
   ],
+  traits: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'shy'?", ua: "Як перекладається слово 'shy'?" },
+      emoji: "🫣",
+      choices: ["Трудолюбивый / Працьовитий", "Застенчивый / Сором'язливий", "Эгоистичный / Егоїст", "Щедрый / Щедрий"],
+      answer: "Застенчивый / Сором'язливий"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Умный':", ua: "Збери слово 'Розумний':" },
+      emoji: "🧠",
+      answer: "CLEVER"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое слово противоположно по смыслу дружелюбному (friendly)?", ua: "Яке слово протилежне за значенням до дружелюбного (friendly)?" },
+      emoji: "😠",
+      choices: ["cheerful", "lazy", "talkative", "unfriendly"],
+      answer: "unfriendly"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Ленивый':", ua: "Збери слово 'Ледачий':" },
+      emoji: "🦥",
+      answer: "LAZY"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как называют человека, который не хочет делиться вещами с другими?", ua: "Як називають людину, яка не хоче ділитися речами з іншими?" },
+      emoji: "🍭",
+      choices: ["generous", "selfish", "hard-working", "clever"],
+      answer: "selfish"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Щедрый':", ua: "Збери слово 'Щедрий':" },
+      emoji: "🎁",
+      answer: "GENEROUS"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: 'My friend talks all day. She is very ______.'", ua: "Встав слово: 'My friend talks all day. She is very ______.'" },
+      emoji: "🗣️",
+      choices: ["moody", "lazy", "talkative", "shy"],
+      answer: "talkative"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Веселый':", ua: "Збери слово 'Радісний':" },
+      emoji: "😊",
+      answer: "CHEERFUL"
+    }
+  ],
+  nextmove_sports: [
+    {
+      type: "choice",
+      question: { ru: "Какое слово означает 'стрельба из лука'?", ua: "Яке слово означає 'стрільба з лука'?" },
+      emoji: "🏹",
+      choices: ["judo", "archery", "athletics", "snowboarding"],
+      answer: "archery"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Гимнастика':", ua: "Збери слово 'Гімнастика':" },
+      emoji: "🤸",
+      answer: "GYMNASTICS"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: 'We played ______ on ice at the skating rink.'", ua: "Встав слово: 'We played ______ on ice at the skating rink.'" },
+      emoji: "🏒",
+      choices: ["judo", "ice hockey", "athletics", "skateboarding"],
+      answer: "ice hockey"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Дзюдо':", ua: "Збери слово 'Дзюдо':" },
+      emoji: "🥋",
+      answer: "JUDO"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'athletics'?", ua: "Як перекладається слово 'athletics'?" },
+      emoji: "🏃",
+      choices: ["легкая атлетика / легка атлетика", "сноубординг", "скейтбординг", "гимнастика / гімнастика"],
+      answer: "легкая атлетика / легка атлетика"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Сноубординг':", ua: "Збери слово 'Сноубординг':" },
+      emoji: "🏂",
+      answer: "SNOWBOARDING"
+    },
+    {
+      type: "choice",
+      question: { ru: "Complete the sentence: 'He practices skateboarding tricks on his ______.'", ua: "Complete the sentence: 'He practices skateboarding tricks on his ______.'" },
+      emoji: "🛹",
+      choices: ["judo belt", "skateboard", "racket", "hockey stick"],
+      answer: "skateboard"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Скейтбординг':", ua: "Збери слово 'Скейтбординг':" },
+      emoji: "🛹",
+      answer: "SKATEBOARDING"
+    }
+  ],
+  nextmove_house: [
+    {
+      type: "choice",
+      question: { ru: "Что означает слово 'attic'?", ua: "Що означає слово 'attic'?" },
+      emoji: "🕸️",
+      choices: ["подвал / підвал", "чердак / горище", "камин / камін", "балкон / балкон"],
+      answer: "чердак / горище"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Камин':", ua: "Збери слово 'Камін':" },
+      emoji: "🔥",
+      answer: "FIREPLACE"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'ceiling'?", ua: "Як перекладається слово 'ceiling'?" },
+      emoji: "💡",
+      choices: ["потолок / стеля", "пол / підлога", "стена / стіна", "крыша / дах"],
+      answer: "потолок / стеля"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Балкон':", ua: "Збери слово 'Балкон':" },
+      emoji: "🌇",
+      answer: "BALCONY"
+    },
+    {
+      type: "choice",
+      question: { ru: "Where do we park our car in front of the house?", ua: "Де ми паркуємо машину перед будинком?" },
+      emoji: "🚗",
+      choices: ["on the ceiling", "on the roof", "on the driveway", "in the cellar"],
+      answer: "on the driveway"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Крыша':", ua: "Збери слово 'Дах':" },
+      emoji: "🏠",
+      answer: "ROOF"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'cellar'?", ua: "Як перекладається слово 'cellar'?" },
+      emoji: "🏺",
+      choices: ["подвал / підвал / льох", "чердак / горище", "внутренний дворик / патіо", "крыша / дах"],
+      answer: "подвал / підвал / льох"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Патио':", ua: "Збери слово 'Патіо':" },
+      emoji: "🏡",
+      answer: "PATIO"
+    }
+  ],
   grammar_tenses: [
     {
       type: "choice",
@@ -716,60 +938,6 @@ const QUIZZES_DATA = {
       emoji: "🧑‍🤝‍🧑",
       answer: "WE"
     }
-  ],
-  traits: [
-    {
-      type: "choice",
-      question: { ru: "Как переводится слово 'shy'?", ua: "Як перекладається слово 'shy'?" },
-      emoji: "🫣",
-      choices: ["Трудолюбивый / Працьовитий", "Застенчивый / Сором'язливий", "Эгоистичный / Егоїст", "Щедрый / Щедрий"],
-      answer: "Застенчивый / Сором'язливий"
-    },
-    {
-      type: "spelling",
-      question: { ru: "Собери слово 'Умный':", ua: "Збери слово 'Розумний':" },
-      emoji: "🧠",
-      answer: "CLEVER"
-    },
-    {
-      type: "choice",
-      question: { ru: "Какое слово противоположно по смыслу дружелюбному (friendly)?", ua: "Яке слово протилежне за значенням до дружелюбного (friendly)?" },
-      emoji: "😠",
-      choices: ["cheerful", "lazy", "talkative", "unfriendly"],
-      answer: "unfriendly"
-    },
-    {
-      type: "spelling",
-      question: { ru: "Собери слово 'Ленивый':", ua: "Збери слово 'Ледачий':" },
-      emoji: "🦥",
-      answer: "LAZY"
-    },
-    {
-      type: "choice",
-      question: { ru: "Как называют человека, который не хочет делиться вещами с другими?", ua: "Як називають людину, яка не хоче ділитися речами з іншими?" },
-      emoji: "🍭",
-      choices: ["generous", "selfish", "hard-working", "clever"],
-      answer: "selfish"
-    },
-    {
-      type: "spelling",
-      question: { ru: "Собери слово 'Щедрый':", ua: "Збери слово 'Щедрий':" },
-      emoji: "🎁",
-      answer: "GENEROUS"
-    },
-    {
-      type: "choice",
-      question: { ru: "Вставь слово: 'My friend talks all day. She is very ______.'", ua: "Встав слово: 'My friend talks all day. She is very ______.'" },
-      emoji: "🗣️",
-      choices: ["moody", "lazy", "talkative", "shy"],
-      answer: "talkative"
-    },
-    {
-      type: "spelling",
-      question: { ru: "Собери слово 'Веселый':", ua: "Збери слово 'Радісний':" },
-      emoji: "😊",
-      answer: "CHEERFUL"
-    }
   ]
 };
 
@@ -786,7 +954,9 @@ const ACHIEVEMENTS = [
   { id: "hobbies_explorer", title: { ru: "Искатель приключений", ua: "Шукач пригод" }, desc: { ru: "Пройти тест по Увлечениям", ua: "Пройти тест по Захопленням" }, emoji: "🗺️", condition: (stats) => stats.completedTopics.includes("hobbies") },
   { id: "science_genius", title: { ru: "Юный гений", ua: "Юний геній" }, desc: { ru: "Пройти тест по Школе и Науке", ua: "Пройти тест по Школі та Науці" }, emoji: "🧪", condition: (stats) => stats.completedTopics.includes("school") },
   { id: "grammar_master", title: { ru: "Магистр грамматики", ua: "Магістр граматики" }, desc: { ru: "Пройти грамматический тест", ua: "Пройти граматичний тест" }, emoji: "🧠", condition: (stats) => stats.completedTopics.includes("grammar_tenses") || stats.completedTopics.includes("grammar_articles") },
-  { id: "traits_expert", title: { ru: "Психолог", ua: "Психолог" }, desc: { ru: "Пройти тест по Чертам характера", ua: "Пройти тест по Рисах характеру" }, emoji: "🧑‍⚕️", condition: (stats) => stats.completedTopics.includes("traits") }
+  { id: "traits_expert", title: { ru: "Психолог", ua: "Психолог" }, desc: { ru: "Пройти тест по Чертам характера", ua: "Пройти тест по Рисах характеру" }, emoji: "🧑‍⚕️", condition: (stats) => stats.completedTopics.includes("traits") },
+  { id: "nextmove_sports_champ", title: { ru: "Чемпион Next Move", ua: "Чемпіон Next Move" }, desc: { ru: "Пройти тест по теме Спорт из Next Move", ua: "Пройти тест з теми Спорт із Next Move" }, emoji: "🏅", condition: (stats) => stats.completedTopics.includes("nextmove_sports") },
+  { id: "dict_starter", title: { ru: "Словникарь", ua: "Словникар" }, desc: { ru: "Добавить 5 слов в личный словарь", ua: "Додати 5 слів до особистого словника" }, emoji: "📘", condition: (stats) => (App.state.personalDict ? App.state.personalDict.length >= 5 : false) }
 ];
 
 // Sound Synthesizer Engine (Web Audio API)
@@ -936,7 +1106,7 @@ const App = {
   state: {
     currentPage: "dashboard",
     theme: "dark",
-    currentLang: "ru",
+    currentLang: "ua", // Default to Ukrainian
     currentTopic: null,
     
     studyIndex: 0,
@@ -946,6 +1116,8 @@ const App = {
     quizXp: 0,
     quizTimeStart: null,
     quizQuestions: [],
+    
+    personalDict: [], // Holds custom added words
     
     userStats: {
       totalXp: 0,
@@ -970,10 +1142,12 @@ const App = {
   init() {
     this.loadLang();
     this.loadStats();
+    this.loadPersonalDict();
     this.setupListeners();
+    this.setupDictionaryListeners();
     this.applyTheme();
     this.checkStreak();
-    this.updateLanguageUI(); // Update UI translations
+    this.updateLanguageUI(); // Apply translations
     
     window.addEventListener("resize", () => {
       const canvas = document.getElementById("confetti-canvas");
@@ -990,13 +1164,7 @@ const App = {
     if (saved === "ru" || saved === "ua") {
       this.state.currentLang = saved;
     } else {
-      // Auto-detect browser locale
-      const locale = navigator.language || navigator.userLanguage;
-      if (locale.startsWith("uk") || locale.startsWith("ua")) {
-        this.state.currentLang = "ua";
-      } else {
-        this.state.currentLang = "ru";
-      }
+      this.state.currentLang = "ua"; // Default language is Ukrainian
     }
   },
 
@@ -1019,10 +1187,11 @@ const App = {
       }
     });
 
-    // Set buttons inner labels and headers
+    // Set buttons inner labels, headers and placeholders
     document.getElementById("btn-lang-toggle").textContent = dict.lang_btn_text;
     document.getElementById("tooltip-xp-title").title = dict.tooltip_xp;
     document.getElementById("tooltip-streak-title").title = dict.tooltip_streak;
+    document.getElementById("dict-search-input").placeholder = dict.dict_search_placeholder;
 
     // Refresh Active Page Contents
     const activePage = this.state.currentPage;
@@ -1033,8 +1202,9 @@ const App = {
       this.renderFlashcard();
     } else if (activePage === "achievements") {
       this.renderAchievements();
+    } else if (activePage === "dictionary") {
+      this.renderPersonalDict();
     } else if (activePage === "quiz") {
-      // Re-fill question content based on language
       const qObj = this.state.quizQuestions[this.state.quizIndex];
       if (qObj) {
         document.getElementById("quiz-question-type-text").textContent = 
@@ -1287,6 +1457,8 @@ const App = {
       this.renderAchievements();
     } else if (pageId === "dashboard") {
       this.renderTopics();
+    } else if (pageId === "dictionary") {
+      this.renderPersonalDict();
     }
   },
 
@@ -1311,7 +1483,6 @@ const App = {
     document.getElementById("card-english-word").textContent = wordInfo.word;
     document.getElementById("card-ipa").textContent = wordInfo.ipa;
 
-    // Use current language for translations
     document.getElementById("card-russian-translation").textContent = wordInfo.translation[lang];
     document.getElementById("card-english-example").textContent = `"${wordInfo.example}"`;
     document.getElementById("card-russian-example").textContent = `"${wordInfo.exampleTranslation[lang]}"`;
@@ -1319,7 +1490,6 @@ const App = {
     document.getElementById("study-current-index").textContent = this.state.studyIndex + 1;
     document.getElementById("study-total-count").textContent = topic.words.length;
 
-    // Pronounce automatically if it's an English vocabulary word, skip grammar rules name complex speech
     setTimeout(() => {
       if (this.state.currentPage === "study" && this.state.studyIndex === topic.words.indexOf(wordInfo)) {
         if (topic.difficulty !== "Grammar" || wordInfo.word.split(" ").length <= 2) {
@@ -1382,7 +1552,6 @@ const App = {
     const progressPercent = (qIndex / qList.length) * 100;
     document.getElementById("quiz-progress-fill-element").style.width = `${progressPercent}%`;
 
-    // Fill Question Text using current language
     document.getElementById("quiz-question-type-text").textContent = 
       questionObj.type === "choice" ? dict.quiz_type_choice : dict.quiz_type_spelling;
     
@@ -1397,7 +1566,6 @@ const App = {
     actBtn.textContent = lang === "ru" ? "Проверить" : "Перевірити";
     actBtn.disabled = true;
     
-    // Bind action
     actBtn.onclick = () => this.checkQuizAnswer();
 
     const choicesContainer = document.getElementById("quiz-choices-container");
@@ -1466,7 +1634,6 @@ const App = {
     }
 
     let letterArray = answer.split("");
-    // Add extra random letters to make it a bit trickier if length < 6
     if (letterArray.length < 6) {
       const extraPool = "ABCDEGHILNOPRSTUWY";
       while (letterArray.length < 7) {
@@ -1475,7 +1642,6 @@ const App = {
       }
     }
     
-    // Fisher-Yates Scramble
     for (let i = letterArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [letterArray[i], letterArray[j]] = [letterArray[j], letterArray[i]];
@@ -1559,8 +1725,7 @@ const App = {
   },
 
   handleQuizAction() {
-    // If the button is clicked while checking answer, check it. Otherwise trigger next.
-    // This is controlled by what function is bound to onclick.
+    // Managed via checking/continue bindings
   },
 
   checkQuizAnswer() {
@@ -1617,7 +1782,6 @@ const App = {
     if (isCorrect) {
       AudioEngine.playSuccess();
       
-      // Pronounce word if applicable
       const speakText = questionObj.type === "spelling" ? questionObj.answer : 
                         (questionObj.choices.indexOf(questionObj.answer) !== -1 && /^[a-zA-Z\s]+$/.test(questionObj.answer) ? questionObj.answer : null);
       if (speakText) {
@@ -1638,7 +1802,6 @@ const App = {
       feedback.className = "quiz-feedback-text wrong";
     }
 
-    // Change action button to "Continue"
     const actBtn = document.getElementById("btn-quiz-action");
     actBtn.textContent = lang === "ru" ? "Продолжить" : "Продовжити";
     actBtn.onclick = () => this.goToNextQuestion();
@@ -1680,7 +1843,6 @@ const App = {
     this.checkBadgesProgression();
     this.saveStats();
 
-    // Fill Results UI
     document.getElementById("results-accuracy").textContent = `${accuracy}%`;
     document.getElementById("results-xp").textContent = `+${finalXp}`;
     document.getElementById("results-time").textContent = formattedTime;
@@ -1784,6 +1946,138 @@ const App = {
     setTimeout(() => {
       toast.classList.remove("show");
     }, 4000);
+  },
+
+  // ================= PERSONAL DICTIONARY LOGIC =================
+  loadPersonalDict() {
+    const saved = localStorage.getItem("lingokids_personal_dict");
+    this.state.personalDict = [];
+    if (saved) {
+      try {
+        this.state.personalDict = JSON.parse(saved);
+      } catch (e) {
+        console.error("Error loading personal dictionary:", e);
+      }
+    }
+  },
+
+  savePersonalDict() {
+    localStorage.setItem("lingokids_personal_dict", JSON.stringify(this.state.personalDict));
+    this.updatePersonalDictCounter();
+    
+    // Check if new personal dictionary achievements unlocked
+    this.checkBadgesProgression();
+  },
+
+  updatePersonalDictCounter() {
+    const count = this.state.personalDict.length;
+    document.getElementById("dict-words-count-display").textContent = count;
+  },
+
+  setupDictionaryListeners() {
+    const form = document.getElementById("dict-add-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const engInput = document.getElementById("dict-input-word");
+      const transInput = document.getElementById("dict-input-trans");
+      const wordVal = engInput.value.trim();
+      const transVal = transInput.value.trim();
+      
+      if (!wordVal || !transVal) return;
+      
+      const lang = this.state.currentLang;
+      const dict = I18N[lang];
+
+      // Check duplicates
+      const exists = this.state.personalDict.some(
+        item => item.word.toLowerCase() === wordVal.toLowerCase()
+      );
+
+      if (exists) {
+        this.showToast(dict.dict_toast_exists);
+        return;
+      }
+
+      // Add word
+      const newWord = {
+        id: Date.now().toString(),
+        word: wordVal,
+        translation: transVal
+      };
+
+      this.state.personalDict.push(newWord);
+      this.savePersonalDict();
+      
+      engInput.value = "";
+      transInput.value = "";
+      
+      this.showToast(dict.dict_toast_added);
+      this.renderPersonalDict();
+    });
+
+    const searchInput = document.getElementById("dict-search-input");
+    searchInput.addEventListener("input", () => {
+      this.renderPersonalDict();
+    });
+  },
+
+  renderPersonalDict() {
+    const container = document.getElementById("dict-words-container");
+    container.innerHTML = "";
+    
+    const query = document.getElementById("dict-search-input").value.trim().toLowerCase();
+    const filtered = this.state.personalDict.filter(item => {
+      return item.word.toLowerCase().includes(query) || 
+             item.translation.toLowerCase().includes(query);
+    });
+
+    this.updatePersonalDictCounter();
+
+    if (filtered.length === 0) {
+      const empty = document.createElement("div");
+      empty.className = "dict-empty-state";
+      empty.textContent = I18N[this.state.currentLang].dict_empty_message;
+      container.appendChild(empty);
+      return;
+    }
+
+    filtered.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "dict-word-card";
+      card.innerHTML = `
+        <div class="dict-word-info">
+          <div class="dict-word-eng">
+            <span>${item.word}</span>
+            <button class="dict-word-speak-btn" title="${this.state.currentLang === "ru" ? "Прослушать" : "Прослухати"}">
+              <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+            </button>
+          </div>
+          <div class="dict-word-trans">${item.translation}</div>
+        </div>
+        <div class="dict-word-actions">
+          <button class="dict-word-del-btn" title="${this.state.currentLang === "ru" ? "Удалить" : "Видалити"}">
+            <svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+          </button>
+        </div>
+      `;
+
+      card.querySelector(".dict-word-speak-btn").addEventListener("click", () => {
+        this.speakWord(item.word);
+      });
+
+      card.querySelector(".dict-word-del-btn").addEventListener("click", () => {
+        this.deleteWord(item.id);
+      });
+
+      container.appendChild(card);
+    });
+  },
+
+  deleteWord(id) {
+    this.state.personalDict = this.state.personalDict.filter(item => item.id !== id);
+    this.savePersonalDict();
+    this.showToast(I18N[this.state.currentLang].dict_toast_deleted);
+    this.renderPersonalDict();
   }
 };
 
