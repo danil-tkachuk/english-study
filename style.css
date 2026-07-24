@@ -814,6 +814,17 @@ main {
   color: #fff;
 }
 
+.choice-btn.selected {
+  border-color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.08);
+  box-shadow: var(--glow-cyan);
+}
+
+.choice-btn.selected .choice-badge {
+  background: var(--accent-cyan);
+  color: #fff;
+}
+
 /* Choice States */
 .choice-btn.correct {
   border-color: var(--accent-lime);
