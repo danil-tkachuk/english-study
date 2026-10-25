@@ -136,7 +136,7 @@ const I18N = {
 const TOPICS_DATA = [
   {
     id: "seasons",
-    title: { ru: "Времена года & Погода", ua: "Времена року & Погода" },
+    title: { ru: "Времена года & Погода", ua: "Пори року & Погода" },
     description: { ru: "Погода, времена года и природные явления.", ua: "Погода, пори року та природні явища." },
     difficulty: "Elementary",
     icon: `<svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM4 10.5H1v2h3v-2zm9-6.8V1h-2v3.7h2zm6.24.14l-1.41-1.41-1.8 1.79 1.42 1.42 1.79-1.8zM20 10.5h3v2h-3v-2zm-8-7c-4.14 0-7.5 3.36-7.5 7.5s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5-3.36-7.5-7.5-7.5zm0 13c-3.03 0-5.5-2.47-5.5-5.5S10.97 6 12.5 6s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5zm4.74 3.66l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zM6.76 16.16l-1.42 1.42 1.79 1.8 1.41-1.41-1.78-1.81zM11 19.3v3.7h2v-3.7h-2z"/></svg>`,
@@ -172,20 +172,48 @@ const TOPICS_DATA = [
   },
   {
     id: "family",
-    title: { ru: "Семья & Отношения", ua: "Родина & Стосунки" },
-    description: { ru: "Родственные связи и общение близких людей.", ua: "Родинні зв'язки та спілкування близьких людей." },
+    title: { ru: "Семья", ua: "Сім'я" },
+    description: { ru: "Члены семьи, родственники и близкие люди.", ua: "Члени родини, родичі та близькі люди." },
     difficulty: "Elementary",
     icon: `<svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.48 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
     color: "#ec4899",
     words: [
-      { word: "Siblings", ipa: "[ˈsɪblɪŋz]", translation: { ru: "Родные братья и сестры", ua: "Рідні брати та сестри" }, emoji: "👦👧", example: "Do you have any siblings or are you an only child?", exampleTranslation: { ru: "У тебя есть братья или сестры, или ты единственный ребенок?", ua: "У тебе є брати чи сестри, чи ти єдина дитина?" } },
-      { word: "Relatives", ipa: "[ˈrelətɪvz]", translation: { ru: "Родственники", ua: "Родичі" }, emoji: "👵👴", example: "All our relatives gather for dinner.", exampleTranslation: { ru: "Все наши родственники собираются на ужин.", ua: "Всі наші родичі збираються на вечерю." } },
-      { word: "Parents", ipa: "[ˈperənts]", translation: { ru: "Родители", ua: "Батьки" }, emoji: "👩‍👦‍👦", example: "My parents always support my hobbies.", exampleTranslation: { ru: "Мои родители всегда поддерживают мои увлечения.", ua: "Мої батьки завжди підтримують мої захоплення." } },
-      { word: "Generation", ipa: "[ˌdʒenəˈreɪʃn]", translation: { ru: "Поколение", ua: "Покоління" }, emoji: "⏳", example: "Three generations lived in the same old house.", exampleTranslation: { ru: "Три поколения жили в одном старом доме.", ua: "Три покоління жили в одному старому будинку." } },
-      { word: "Childhood", ipa: "[ˈtʃaɪldhʊd]", translation: { ru: "Детство", ua: "Дитинство" }, emoji: "🪁", example: "I spent my childhood in a small village.", exampleTranslation: { ru: "Я провел свое детство в маленькой деревне.", ua: "Я провів своє дитинство в маленькому селі." } },
-      { word: "Friendship", ipa: "[ˈfrendʃɪp]", translation: { ru: "Дружба", ua: "Дружба" }, emoji: "🤝", example: "Their friendship started in school.", exampleTranslation: { ru: "Их дружба началась в школе.", ua: "Їхня дружба почалася в школі." } },
-      { word: "Support", ipa: "[səˈpɔːrt]", translation: { ru: "Поддержка / Поддерживать", ua: "Підтримка / Підтримувати" }, emoji: "❤️", example: "Family support is very important.", exampleTranslation: { ru: "Поддержка семьи очень важна.", ua: "Підтримка родини дуже важлива." } },
-      { word: "Honesty", ipa: "[ˈa:nəsti]", translation: { ru: "Честность", ua: "Чесність" }, emoji: "😇", example: "Honesty is the foundation of trust.", exampleTranslation: { ru: "Честность — основа доверия.", ua: "Чесність — основа довіри." } }
+      { word: "uncle", ipa: "[ˈʌŋkl]", translation: { ru: "дядя", ua: "дядя" }, emoji: "👨", example: "My uncle plays football with us.", exampleTranslation: { ru: "Мой дядя играет с нами в футбол.", ua: "Мій дядя грає з нами у футбол." } },
+      { word: "aunt", ipa: "[ɑːnt]", translation: { ru: "тетя", ua: "тьотя" }, emoji: "👩", example: "Aunt Sarah bakes sweet berry pies.", exampleTranslation: { ru: "Тетя Сара печет сладкие ягодные пироги.", ua: "Тьотя Сара пече солодкі ягідні пироги." } },
+      { word: "sister", ipa: "[ˈsɪstər]", translation: { ru: "сестра", ua: "сестра" }, emoji: "👧", example: "My little sister loves drawing flowers.", exampleTranslation: { ru: "Моя младшая сестра любит рисовать цветы.", ua: "Моя молодша сестра любить малювати квіти." } },
+      { word: "brother", ipa: "[ˈbrʌðər]", translation: { ru: "брат", ua: "брат" }, emoji: "👦", example: "My elder brother teaches me guitar.", exampleTranslation: { ru: "Мой старший брат учит меня играть на гитаре.", ua: "Мій старший брат вчить мене грати на гітарі." } },
+      { word: "mother", ipa: "[ˈmʌðər]", translation: { ru: "мама", ua: "мама" }, emoji: "👩", example: "Mother reads us bedtime stories.", exampleTranslation: { ru: "Мама читает нам сказки на ночь.", ua: "Мама читає нам казки на ніч." } },
+      { word: "father", ipa: "[ˈfɑːðər]", translation: { ru: "папа", ua: "папа" }, emoji: "👨", example: "Father helps me with difficult homework.", exampleTranslation: { ru: "Папа помогает мне со сложной домашней работой.", ua: "Папа допомагає мені зі складним домашнім завданням." } },
+      { word: "cousin", ipa: "[ˈkʌzn]", translation: { ru: "двоюродный брат / сестра", ua: "двоюрідний" }, emoji: "🧑‍🤝‍🧑", example: "My cousin lives in Kyiv.", exampleTranslation: { ru: "Мой двоюродный брат живет в Киеве.", ua: "Мій двоюрідний брат живе у Києві." } },
+      { word: "family", ipa: "[ˈfæməli]", translation: { ru: "семья", ua: "сім'я" }, emoji: "👨‍👩‍👧‍👦", example: "We have a big and friendly family.", exampleTranslation: { ru: "У нас большая и дружная семья.", ua: "У нас велика та дружна сім'я." } },
+      { word: "grandfather", ipa: "[ˈɡrænfɑːðər]", translation: { ru: "дедушка", ua: "дідусь" }, emoji: "👴", example: "Grandfather makes wooden toys.", exampleTranslation: { ru: "Дедушка мастерит деревянные игрушки.", ua: "Дідусь майструє дерев'яні іграшки." } },
+      { word: "grandmother", ipa: "[ˈɡrænmʌðər]", translation: { ru: "бабушка", ua: "бабуся" }, emoji: "👵", example: "Grandmother knits warm woollen socks.", exampleTranslation: { ru: "Бабушка вяжет теплые шерстяные носки.", ua: "Бабуся в'яже теплі вовняні шкарпетки." } },
+      { word: "daughter", ipa: "[ˈdɔːtər]", translation: { ru: "дочь", ua: "донька" }, emoji: "👧", example: "Their daughter goes to musical school.", exampleTranslation: { ru: "Их дочь ходит в музыкальную школу.", ua: "Їхня донька ходить до музичної школи." } },
+      { word: "son", ipa: "[sʌn]", translation: { ru: "сын", ua: "син" }, emoji: "👦", example: "He is proud of his talented son.", exampleTranslation: { ru: "Он гордится своим талантливым сыном.", ua: "Він пишається своїм талановитим сином." } },
+      { word: "niece", ipa: "[niːs]", translation: { ru: "племянница", ua: "племінниця" }, emoji: "👧", example: "My niece loves playing with cute kittens.", exampleTranslation: { ru: "Моя племянница обожает играть с котятами.", ua: "Моя племінниця обожнює гратися з кошенятами." } },
+      { word: "nephew", ipa: "[ˈnefjuː]", translation: { ru: "племянник", ua: "племінник" }, emoji: "👦", example: "I bought a cool Lego set for my nephew.", exampleTranslation: { ru: "Я купил крутой набор Лего для своего племянника.", ua: "Я купив крутий набір Лего для свого племінника." } },
+      { word: "parents", ipa: "[ˈpeərənts]", translation: { ru: "родители", ua: "батьки" }, emoji: "👩‍❤️‍👨", example: "My parents always support my dreams.", exampleTranslation: { ru: "Мои родители всегда поддерживают мои мечты.", ua: "Мої батьки завжди підтримують мої мрії." } },
+      { word: "siblings", ipa: "[ˈsɪblɪŋz]", translation: { ru: "родные братья и сестры", ua: "рідні брат і сестра" }, emoji: "👫", example: "How many siblings do you have?", exampleTranslation: { ru: "Сколько у тебя братьев и сестер?", ua: "Скільки у тебе братів і сестер?" } },
+      { word: "child", ipa: "[tʃaɪld]", translation: { ru: "ребенок", ua: "дитина" }, emoji: "🧒", example: "Every child needs love and care.", exampleTranslation: { ru: "Каждому ребенку нужна любовь и забота.", ua: "Кожній дитині потрібна любов і турбота." } },
+      { word: "children", ipa: "[ˈtʃɪldrən]", translation: { ru: "дети", ua: "діти" }, emoji: "🧒👧", example: "Children are playing joyfully in the park.", exampleTranslation: { ru: "Дети весело играют в парке.", ua: "Діти весело граються у парку." } },
+      { word: "grandson", ipa: "[ˈɡrænsʌn]", translation: { ru: "внук", ua: "внук" }, emoji: "👦", example: "The proud grandpa walked in the garden with his grandson.", exampleTranslation: { ru: "Гордый дедушка гулял в саду с внуком.", ua: "Гордий дідусь гуляв у саду з внуком." } },
+      { word: "grand-daughter", ipa: "[ˈɡrændɔːtər]", translation: { ru: "внучка", ua: "онучка" }, emoji: "👧", example: "She brought flowers for her grand-daughter.", exampleTranslation: { ru: "Она принесла цветы для своей внучки.", ua: "Вона принесла квіти для своєї онучки." } },
+      { word: "dad", ipa: "[dæd]", translation: { ru: "папа", ua: "тато" }, emoji: "🧔", example: "Dad showed me how to ride a bicycle.", exampleTranslation: { ru: "Папа показал мне, как кататься на велосипеде.", ua: "Тато показав мені, як кататися на велосипеді." } },
+      { word: "mum", ipa: "[mʌm]", translation: { ru: "мама", ua: "мама" }, emoji: "👩", example: "Mum gives the warmest hugs.", exampleTranslation: { ru: "Мама обнимает теплее всех.", ua: "Мама обіймає найтепліше." } },
+      { word: "mummy", ipa: "[ˈmʌmi]", translation: { ru: "мамуля", ua: "мамуля" }, emoji: "🤱", example: "Good morning, dear mummy!", exampleTranslation: { ru: "Доброе утро, милая мамуля!", ua: "Доброго ранку, люба мамуля!" } },
+      { word: "daddy", ipa: "[ˈdædi]", translation: { ru: "татусь", ua: "татусь" }, emoji: "👨‍👦", example: "Daddy lifted me up on his shoulders.", exampleTranslation: { ru: "Папочка поднял меня к себе на плечи.", ua: "Татусь підняв мене собі на плечі." } },
+      { word: "granny", ipa: "[ˈɡræni]", translation: { ru: "бабуля", ua: "бабуля" }, emoji: "👵", example: "Granny tells the best fairy tales.", exampleTranslation: { ru: "Бабуля рассказывает лучшие сказки.", ua: "Бабуля розповідає найкращі казки." } },
+      { word: "grandma", ipa: "[ˈɡrænmɑː]", translation: { ru: "бабушка", ua: "бабуся" }, emoji: "👵", example: "We visited grandma on Sunday.", exampleTranslation: { ru: "Мы навестили бабушку в воскресенье.", ua: "Ми провідали бабусю в неділю." } },
+      { word: "grandpa", ipa: "[ˈɡrænpɑː]", translation: { ru: "дедушка", ua: "дідусь" }, emoji: "👴", example: "Grandpa likes fishing early in the morning.", exampleTranslation: { ru: "Дедушка любит рыбачить рано утром.", ua: "Дідусь любить рибалити рано-вранці." } },
+      { word: "grandparents", ipa: "[ˈɡrænpeərənts]", translation: { ru: "бабушка и дедушка", ua: "бабуся і дідусь" }, emoji: "🧓👵", example: "My grandparents celebrate 50 years together.", exampleTranslation: { ru: "Мои бабушка и дедушка празднуют 50 лет вместе.", ua: "Мої бабуся і дідусь святкують 50 років разом." } },
+      { word: "grandchildren", ipa: "[ˈɡræntʃɪldrən]", translation: { ru: "внуки", ua: "онуки" }, emoji: "👧👦", example: "They adore spending holidays with their grandchildren.", exampleTranslation: { ru: "Они обожают проводить праздники с внуками.", ua: "Вони обожнюють проводити свята з онуками." } },
+      { word: "twins", ipa: "[twɪnz]", translation: { ru: "близнецы", ua: "близнюки" }, emoji: "👯", example: "The twin sisters look exactly identical.", exampleTranslation: { ru: "Сестры-близняшки выглядят совершенно одинаково.", ua: "Сестри-близнючки виглядають абсолютно однаково." } },
+      { word: "wedding", ipa: "[ˈwedɪŋ]", translation: { ru: "свадьба", ua: "весілля" }, emoji: "💍", example: "The wedding was held in a sunny garden.", exampleTranslation: { ru: "Свадьба прошла в солнечном саду.", ua: "Весілля відбулося у сонячному саду." } },
+      { word: "wife", ipa: "[waɪf]", translation: { ru: "жена", ua: "жінка" }, emoji: "👰", example: "He gave a beautiful bouquet of roses to his wife.", exampleTranslation: { ru: "Он подарил красивый букет роз своей жене.", ua: "Він подарував гарний букет троянд своїй жінці." } },
+      { word: "husband", ipa: "[ˈhʌzbənd]", translation: { ru: "муж", ua: "чоловік" }, emoji: "🤵", example: "Her husband cooked dinner for the whole family.", exampleTranslation: { ru: "Её муж приготовил ужин для всей семьи.", ua: "Її чоловік приготував вечерю для всієї родини." } },
+      { word: "Relatives", ipa: "[ˈrelətɪvz]", translation: { ru: "родственники", ua: "родичі" }, emoji: "👵👴", example: "All our relatives gather for holiday dinner.", exampleTranslation: { ru: "Все наши родственники собираются на праздничный ужин.", ua: "Всі наші родичі збираються на святкову вечерю." } },
+      { word: "Generation", ipa: "[ˌdʒenəˈreɪʃn]", translation: { ru: "поколение", ua: "покоління" }, emoji: "⏳", example: "Three generations live happily in this house.", exampleTranslation: { ru: "Три поколения счастливо живут в этом доме.", ua: "Три покоління щасливо живуть у цьому будинку." } },
+      { word: "Childhood", ipa: "[ˈtʃaɪldhʊd]", translation: { ru: "детство", ua: "дитинство" }, emoji: "🪁", example: "I have many joyful memories from my childhood.", exampleTranslation: { ru: "У меня много радостных воспоминаний из детства.", ua: "У мене багато радісних спогадів з дитинства." } }
     ]
   },
   {
@@ -244,7 +272,7 @@ const TOPICS_DATA = [
   },
   {
     id: "traits",
-    title: { ru: "Черты характера", ua: "Риси характеру" },
+    title: { ru: "Черты характера (Риси)", ua: "Риси характеру (Риси)" },
     description: { ru: "Слова, описывающие личность и поведение людей.", ua: "Слова, що описують особистість та поведінку людей." },
     difficulty: "Intermediate",
     icon: `<svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>`,
@@ -334,6 +362,290 @@ const TOPICS_DATA = [
       { word: "Possessive Pronouns", ipa: "[mine, yours, his, hers, ours, theirs]", translation: { ru: "Притяжательные местоимения (Чей? заменяют существительное)", ua: "Присвійні займенники (Чий? замінюють іменник)" }, emoji: "🔑", example: "This key is mine, not yours.", exampleTranslation: { ru: "Этот ключ мой, а не твой.", ua: "Цей ключ мій, а не твій." } },
       { word: "Zero Article", ipa: "[plural, uncountable, general]", translation: { ru: "Нулевой артикль (множественное число, обобщения, имена)", ua: "Нульовий артикль (множина, загальні поняття, імена)" }, emoji: "🚫", example: "I like milk. Water is essential for life.", exampleTranslation: { ru: "Я люблю молоко. Вода необходима для жизни.", ua: "Я люблю молоко. Вода необхідна для життя." } },
       { word: "Reflexive Pronouns", ipa: "[myself, yourself, himself, ourselves]", translation: { ru: "Возвратные местоимения (себя, сам, самостоятельно)", ua: "Зворотні займенники (себе, сам, самостійно)" }, emoji: "🪞", example: "He cleaned the room by himself.", exampleTranslation: { ru: "Он убрал комнату сам.", ua: "Він прибрав кімнату сам." } }
+    ]
+  },
+  {
+    id: "professions",
+    title: { ru: "Профессии", ua: "Професії" },
+    description: { ru: "Профессии, специальности и сфера труда.", ua: "Професії, спеціальності та сфера праці." },
+    difficulty: "Elementary",
+    icon: `<svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>`,
+    color: "#f97316",
+    words: [
+      { word: "hairdresser", ipa: "[ˈheədresər]", translation: { ru: "парикмахер", ua: "парикхмахер" }, emoji: "💇", example: "The hairdresser cut her hair beautifully.", exampleTranslation: { ru: "Парикмахер красиво подстриг её волосы.", ua: "Перукар красиво підстриг її волосся." } },
+      { word: "painter", ipa: "[ˈpeɪntər]", translation: { ru: "художник", ua: "художник" }, emoji: "🎨", example: "The painter created a colourful landscape.", exampleTranslation: { ru: "Художник создал красочный пейзаж.", ua: "Художник створив барвистий пейзаж." } },
+      { word: "doctor", ipa: "[ˈdɒktər]", translation: { ru: "врач", ua: "лікар" }, emoji: "🩺", example: "The doctor helped the sick child feel better.", exampleTranslation: { ru: "Врач помог заболевшему ребенку почувствовать себя лучше.", ua: "Лікар допоміг хворій дитині почуватися краще." } },
+      { word: "nurse", ipa: "[nɜːs]", translation: { ru: "медсестра", ua: "медсестра" }, emoji: "💉", example: "The kind nurse gave me some medicine.", exampleTranslation: { ru: "Добрая медсестра дала мне лекарство.", ua: "Добра медсестра дала мені ліки." } },
+      { word: "dentist", ipa: "[ˈdentɪst]", translation: { ru: "стоматолог", ua: "стоматолог" }, emoji: "🦷", example: "Visit the dentist twice a year for healthy teeth.", exampleTranslation: { ru: "Посещай стоматолога дважды в год для здоровых зубов.", ua: "Відвідуй стоматолога двічі на рік для здорових зубів." } },
+      { word: "shop assistant", ipa: "[ʃɒp əˈsɪstənt]", translation: { ru: "продавец", ua: "продавець" }, emoji: "🛍️", example: "The shop assistant helped me find the right size.", exampleTranslation: { ru: "Продавец помог мне найти нужный размер.", ua: "Продавець допоміг мені знайти потрібний розмір." } },
+      { word: "judge", ipa: "[dʒʌdʒ]", translation: { ru: "судья", ua: "суддя" }, emoji: "⚖️", example: "The judge listened carefully to both sides in court.", exampleTranslation: { ru: "Судья внимательно выслушал обе стороны в суде.", ua: "Суддя уважно вислухав обидві сторони в суді." } },
+      { word: "chef", ipa: "[ʃef]", translation: { ru: "шеф-повар", ua: "шеф повар" }, emoji: "👨‍🍳", example: "The chef cooked a delicious dinner at the restaurant.", exampleTranslation: { ru: "Шеф-повар приготовил вкусный ужин в ресторане.", ua: "Шеф-кухар приготував смачну вечерю в ресторані." } },
+      { word: "secretary", ipa: "[ˈsekrətri]", translation: { ru: "секретарь", ua: "секретар" }, emoji: "📁", example: "The secretary answered phone calls and organized documents.", exampleTranslation: { ru: "Секретарь отвечал на звонки и организовывал документы.", ua: "Секретар відповідав на дзвінки та організовував документи." } },
+      { word: "clown", ipa: "[klaʊn]", translation: { ru: "клоун", ua: "клоун" }, emoji: "🤡", example: "The funny clown made all the children laugh at the circus.", exampleTranslation: { ru: "Веселый клоун рассмешил всех детей в цирке.", ua: "Веселий клоун розсмішив усіх дітей у цирку." } },
+      { word: "cashier", ipa: "[kæˈʃɪər]", translation: { ru: "кассир", ua: "касир" }, emoji: "💳", example: "Pay the cashier at the supermarket checkout.", exampleTranslation: { ru: "Оплатите покупки кассиру на кассе супермаркета.", ua: "Оплатіть покупки касиру на касі супермаркету." } },
+      { word: "businessman", ipa: "[ˈbɪznəsmæn]", translation: { ru: "бизнесмен", ua: "бізнесмен" }, emoji: "💼", example: "The businessman travels around the world for meetings.", exampleTranslation: { ru: "Бизнесмен путешествует по миру на встречи.", ua: "Бізнесмен подорожує світом на зустрічі." } },
+      { word: "butcher", ipa: "[ˈbʊtʃər]", translation: { ru: "мясник", ua: "продавець м'ясного відділу" }, emoji: "🥩", example: "We bought fresh meat from the butcher.", exampleTranslation: { ru: "Мы купили свежее мясо у мясника.", ua: "Ми купили свіже м'ясо у продавця м'ясного відділу." } },
+      { word: "photographer", ipa: "[fəˈtɒɡrəfər]", translation: { ru: "фотограф", ua: "фотограф" }, emoji: "📷", example: "The photographer took amazing pictures of the wedding.", exampleTranslation: { ru: "Фотограф сделал потрясающие снимки свадьбы.", ua: "Фотограф зробив чудові знімки весілля." } },
+      { word: "lawyer", ipa: "[ˈlɔɪər]", translation: { ru: "юрист", ua: "юрист" }, emoji: "📜", example: "A good lawyer knows all the laws very well.", exampleTranslation: { ru: "Хороший юрист отлично знает все законы.", ua: "Гарний юрист чудово знає всі закони." } },
+      { word: "baker", ipa: "[ˈbeɪkər]", translation: { ru: "пекарь", ua: "пекар" }, emoji: "🥖", example: "The baker bakes fresh bread every morning.", exampleTranslation: { ru: "Пекарь выпекает свежий хлеб каждое утро.", ua: "Пекар випікає свіжий хліб щоранку." } },
+      { word: "farmer", ipa: "[ˈfɑːmər]", translation: { ru: "фермер", ua: "фермер" }, emoji: "🚜", example: "The farmer grows vegetables and feeds animals.", exampleTranslation: { ru: "Фермер выращивает овощи и кормит животных.", ua: "Фермер вирощує овочі та годує тварин." } },
+      { word: "builder", ipa: "[ˈbɪldər]", translation: { ru: "строитель", ua: "будівельник" }, emoji: "🧱", example: "The builder is constructing a new modern school.", exampleTranslation: { ru: "Строитель строит новую современную школу.", ua: "Будівельник будує нову сучасну школу." } },
+      { word: "fireman", ipa: "[ˈfaɪəmən]", translation: { ru: "пожарный", ua: "пожежник" }, emoji: "🚒", example: "The brave fireman rescued a cat from the burning house.", exampleTranslation: { ru: "Храбрый пожарный спас кота из горящего дома.", ua: "Хоробрий пожежник урятував кота з палаючого будинку." } },
+      { word: "gardener", ipa: "[ˈɡɑːdnər]", translation: { ru: "садовник", ua: "садівник" }, emoji: "🌻", example: "The gardener waters colorful roses in the park.", exampleTranslation: { ru: "Садовник поливает разноцветные розы в парке.", ua: "Садівник поливає різнокольорові троянди в парку." } },
+      { word: "engineer", ipa: "[ˌendʒɪˈnɪər]", translation: { ru: "инженер", ua: "інженер" }, emoji: "⚙️", example: "The engineer designs bridges and smart machines.", exampleTranslation: { ru: "Инженер проектирует мосты и умные машины.", ua: "Інженер проектує мости та розумні машини." } },
+      { word: "seller", ipa: "[ˈselər]", translation: { ru: "продавец", ua: "продавець" }, emoji: "🏪", example: "The seller gave us our change and smiled.", exampleTranslation: { ru: "Продавец дал нам сдачу и улыбнулся.", ua: "Продавець дав нам решту та посміхнувся." } },
+      { word: "actor", ipa: "[ˈæktər]", translation: { ru: "актер", ua: "актор" }, emoji: "🎭", example: "The famous actor starred in a new adventure movie.", exampleTranslation: { ru: "Знаменитый актер снялся в новом приключенческом фильме.", ua: "Знаменитий актор знявся у новому пригодницькому фільмі." } },
+      { word: "cleaner", ipa: "[ˈkliːnər]", translation: { ru: "уборщик", ua: "прибиральник" }, emoji: "🧹", example: "The cleaner keeps the school halls tidy and clean.", exampleTranslation: { ru: "Уборщик поддерживает чистоту в школьных коридорах.", ua: "Прибиральник підтримує чистоту у шкільних коридорах." } },
+      { word: "cook", ipa: "[kʊk]", translation: { ru: "повар", ua: "повар" }, emoji: "🍲", example: "My dad is a wonderful cook.", exampleTranslation: { ru: "Мой папа замечательный повар.", ua: "Мій тато чудовий кухар." } },
+      { word: "driver", ipa: "[ˈdraɪvər]", translation: { ru: "водитель", ua: "водій" }, emoji: "🚌", example: "The bus driver drove carefully in the rain.", exampleTranslation: { ru: "Водитель автобуса осторожно вел машину под дождем.", ua: "Водій автобуса обережно їхав під дощем." } },
+      { word: "vet", ipa: "[vet]", translation: { ru: "ветеринар", ua: "ветеринар" }, emoji: "🐶", example: "We took our puppy to the vet for a check-up.", exampleTranslation: { ru: "Мы отвезли нашего щенка к ветеринару на осмотр.", ua: "Ми відвезли нашого цуценя до ветеринара на огляд." } },
+      { word: "artist", ipa: "[ˈɑːtɪst]", translation: { ru: "художник", ua: "художник" }, emoji: "🖌️", example: "The artist painted a masterpiece.", exampleTranslation: { ru: "Художник написал шедевр.", ua: "Художник написав шедевр." } },
+      { word: "policeman", ipa: "[pəˈliːsmən]", translation: { ru: "полицейский", ua: "поліцейский" }, emoji: "👮", example: "The policeman helped the lost tourist find the way.", exampleTranslation: { ru: "Полицейский помог заблудившемуся туристу найти дорогу.", ua: "Поліцейський допоміг туристу знайти дорогу." } },
+      { word: "musician", ipa: "[mjuːˈzɪʃn]", translation: { ru: "музыкант", ua: "музикант" }, emoji: "🎸", example: "The talented musician played the guitar at the concert.", exampleTranslation: { ru: "Талантливый музыкант играл на гитаре на концерте.", ua: "Талановитий музикант грав на гітарі на концерті." } },
+      { word: "singer", ipa: "[ˈsɪŋər]", translation: { ru: "певец", ua: "співак" }, emoji: "🎤", example: "The pop singer has a powerful voice.", exampleTranslation: { ru: "У поп-певца сильный голос.", ua: "У поп-співака сильний голос." } }
+    ]
+  },
+  {
+    id: "containers",
+    title: { ru: "Контейнеры", ua: "Контейнери" },
+    description: { ru: "Емкости, упаковка, посуда и порции.", ua: "Ємності, упаковка, посуд та порції." },
+    difficulty: "Elementary",
+    icon: `<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>`,
+    color: "#14b8a6",
+    words: [
+      { word: "box", ipa: "[bɒks]", translation: { ru: "коробка, ящик", ua: "коробка, ящик" }, emoji: "📦", example: "Put the toys inside the wooden box.", exampleTranslation: { ru: "Сложи игрушки в деревянную коробку.", ua: "Склади іграшки у дерев'яну коробку." } },
+      { word: "carton", ipa: "[ˈkɑːtn]", translation: { ru: "картонная коробка", ua: "картонна коробка" }, emoji: "🧃", example: "Please buy a carton of milk and orange juice.", exampleTranslation: { ru: "Купи, пожалуйста, картонную пачку молока и апельсиновый сок.", ua: "Купи, будь ласка, картонну коробку молока та апельсиновий сік." } },
+      { word: "bottle", ipa: "[ˈbɒtl]", translation: { ru: "бутылка", ua: "бутилка" }, emoji: "🍾", example: "Always carry a bottle of fresh water.", exampleTranslation: { ru: "Всегда носи с собой бутылку свежей воды.", ua: "Завжди носи з собою пляшку свіжої води." } },
+      { word: "glass", ipa: "[ɡlɑːs]", translation: { ru: "стакан", ua: "склянка" }, emoji: "🥛", example: "He drank a cool glass of apple juice.", exampleTranslation: { ru: "Он выпил прохладный стакан яблочного сока.", ua: "Він випив прохолодну склянку яблучного соку." } },
+      { word: "jar", ipa: "[dʒɑːr]", translation: { ru: "банка (стеклянная)", ua: "банка" }, emoji: "🍯", example: "There is sweet strawberry jam in the glass jar.", exampleTranslation: { ru: "В стеклянной банке сладкое клубничное варенье.", ua: "У скляній банці солодке полуничне варення." } },
+      { word: "cup", ipa: "[kʌp]", translation: { ru: "чашка", ua: "чашка" }, emoji: "☕", example: "Grandma loves a hot cup of herbal tea.", exampleTranslation: { ru: "Бабушка любит горячую чашку травяного чая.", ua: "Бабуся любить гарячу чашку трав'яного чаю." } },
+      { word: "drop", ipa: "[drɒp]", translation: { ru: "капля", ua: "крапля" }, emoji: "💧", example: "Add a single drop of lemon juice.", exampleTranslation: { ru: "Добавь одну каплю лимонного сока.", ua: "Додай одну краплю лимонного соку." } },
+      { word: "roll", ipa: "[rəʊl]", translation: { ru: "рулон", ua: "рулон" }, emoji: "🧻", example: "Pass me a roll of paper towels, please.", exampleTranslation: { ru: "Передай мне рулон бумажных полотенец, пожалуйста.", ua: "Передай мені рулон паперових рушників, будь ласка." } },
+      { word: "bag", ipa: "[bæɡ]", translation: { ru: "пакет, мешок", ua: "пакет, мішок" }, emoji: "🛍️", example: "We carried a heavy bag of apples home.", exampleTranslation: { ru: "Мы несли домой тяжелый пакет яблок.", ua: "Ми несли додому важкий пакет яблук." } },
+      { word: "pack", ipa: "[pæk]", translation: { ru: "пачка", ua: "пачка" }, emoji: "🃏", example: "He opened a new pack of playing cards.", exampleTranslation: { ru: "Он открыл новую пачку игральных карт.", ua: "Він відкрив нову пачку гральних карт." } },
+      { word: "jug", ipa: "[dʒʌɡ]", translation: { ru: "кувшин", ua: "глечик" }, emoji: "🏺", example: "There is fresh cold lemonade in the jug.", exampleTranslation: { ru: "В кувшине свежий холодный лимонад.", ua: "У глечику свіжий холодний лимонад." } },
+      { word: "can", ipa: "[kæn]", translation: { ru: "металлическая банка", ua: "металева банка" }, emoji: "🥫", example: "Would you like a can of cold soda?", exampleTranslation: { ru: "Хочешь металлическую банку холодной газировки?", ua: "Хочеш металеву банку холодної газованки?" } },
+      { word: "piece", ipa: "[piːs]", translation: { ru: "кусок", ua: "шматок" }, emoji: "🧩", example: "Have a piece of chocolate cake!", exampleTranslation: { ru: "Угощайся кусочком шоколадного торта!", ua: "Пригощайся шматком шоколадного торта!" } },
+      { word: "slice", ipa: "[slaɪs]", translation: { ru: "тонкий ломтик", ua: "тоненький шматок" }, emoji: "🍕", example: "I ate a thin slice of cheese with bread.", exampleTranslation: { ru: "Я съел тонкий ломтик сыра с хлебом.", ua: "Я з'їв тоненький шматок сиру з хлібом." } },
+      { word: "loaf", ipa: "[ləʊf]", translation: { ru: "буханка", ua: "буханка" }, emoji: "🍞", example: "We bought a warm loaf of crusty bread.", exampleTranslation: { ru: "Мы купили теплую буханку хрустящего хлеба.", ua: "Ми купили теплу буханку хрусткого хліба." } },
+      { word: "plate", ipa: "[pleɪt]", translation: { ru: "тарелка", ua: "тарілка" }, emoji: "🍽️", example: "Put the pancakes on a large white plate.", exampleTranslation: { ru: "Положи блинчики на большую белую тарелку.", ua: "Поклади млинці на велику білу тарілку." } },
+      { word: "bowl", ipa: "[bəʊl]", translation: { ru: "глубокая тарелка", ua: "глибока тарілка" }, emoji: "🥣", example: "I enjoy eating a bowl of oatmeal for breakfast.", exampleTranslation: { ru: "Я люблю есть миску овсянки на завтрак.", ua: "Я люблю їсти глибоку тарілку вівсянки на сніданок." } },
+      { word: "mug", ipa: "[mʌɡ]", translation: { ru: "кружка", ua: "кружка" }, emoji: "☕", example: "He poured hot chocolate into his favorite mug.", exampleTranslation: { ru: "Он налил горячий шоколад в свою любимую кружку.", ua: "Він налив гарячий шоколад у свою улюблену кружку." } },
+      { word: "bar", ipa: "[bɑːr]", translation: { ru: "плитка", ua: "плитка" }, emoji: "🍫", example: "She broke off two squares from the bar of chocolate.", exampleTranslation: { ru: "Она отломила два кусочка от плитки шоколада.", ua: "Вона відламала два шматочки від плитки шоколаду." } },
+      { word: "head", ipa: "[hed]", translation: { ru: "головка, кочан", ua: "голівка" }, emoji: "🥬", example: "We chopped a head of green cabbage for salad.", exampleTranslation: { ru: "Мы нашинковали кочан зеленой капусты для салата.", ua: "Ми нашаткували голівку зеленої капусти для салату." } },
+      { word: "packet", ipa: "[ˈpækɪt]", translation: { ru: "пачка, пакет", ua: "пачка, пакет" }, emoji: "🍟", example: "He opened a packet of crunchy crisps.", exampleTranslation: { ru: "Он открыл пачку хрустящих чипсов.", ua: "Він відкрив пачку хрустких чипсів." } },
+      { word: "tin", ipa: "[tɪn]", translation: { ru: "консервная банка", ua: "консервна банка" }, emoji: "🥫", example: "Open a tin of tuna with a can opener.", exampleTranslation: { ru: "Открой консервную банку тунца консервным ножом.", ua: "Відкрий консервну банку тунця консервним ножем." } },
+      { word: "spoon", ipa: "[spuːn]", translation: { ru: "ложка", ua: "ложка" }, emoji: "🥄", example: "Add one spoon of honey to your tea.", exampleTranslation: { ru: "Добавь одну ложку меда в свой чай.", ua: "Додай одну ложку меду у свій чай." } },
+      { word: "pot", ipa: "[pɒt]", translation: { ru: "кастрюля", ua: "кастрюля" }, emoji: "🍲", example: "The soup is bubbling in the big cooking pot.", exampleTranslation: { ru: "Суп кипит в большой кастрюле.", ua: "Суп кипить у великій каструлі." } },
+      { word: "tube", ipa: "[tjuːb]", translation: { ru: "тюбик", ua: "тюбик" }, emoji: "🧴", example: "Squeeze the tube of mint toothpaste gently.", exampleTranslation: { ru: "Аккуратно выдави тюбик мятной зубной пасты.", ua: "Акуратно вичави тюбик м'ятної зубної пасти." } },
+      { word: "dozen", ipa: "[ˈdʌzn]", translation: { ru: "дюжина, лоток", ua: "дюжина, лоток" }, emoji: "🥚", example: "Mom bought a dozen eggs from the local farm.", exampleTranslation: { ru: "Мама купила дюжину яиц на местной ферме.", ua: "Мама купила дюжину яєць на місцевій фермі." } },
+      { word: "bunch", ipa: "[bʌntʃ]", translation: { ru: "гроздь, связка", ua: "грона, гроздь" }, emoji: "🍇", example: "A sweet bunch of green grapes makes a great snack.", exampleTranslation: { ru: "Сладкая гроздь зеленого винограда — отличный перекус.", ua: "Солодка грона зеленого винограду — чудовий перекус." } },
+      { word: "basket", ipa: "[ˈbɑːskɪt]", translation: { ru: "корзинка", ua: "корзинка" }, emoji: "🧺", example: "We gathered ripe red strawberries in a small basket.", exampleTranslation: { ru: "Мы собрали спелую красную клубнику в корзинку.", ua: "Ми зібрали стиглу червону полуницю в корзинку." } }
+    ]
+  },
+  {
+    id: "lessons",
+    title: { ru: "Уроки", ua: "Уроки" },
+    description: { ru: "Школьные предметы и учебные дисциплины.", ua: "Шкільні предмети та навчальні дисципліни." },
+    difficulty: "Elementary",
+    icon: `<svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`,
+    color: "#8b5cf6",
+    words: [
+      { word: "Art", ipa: "[ɑːt]", translation: { ru: "рисование", ua: "малювання" }, emoji: "🎨", example: "We paint watercolors in our Art lesson.", exampleTranslation: { ru: "Мы рисуем акварелью на уроке рисования.", ua: "Ми малюємо аквареллю на уроці малювання." } },
+      { word: "History", ipa: "[ˈhɪstri]", translation: { ru: "история", ua: "історія" }, emoji: "🏛️", example: "In History, we learn about ancient castles and kings.", exampleTranslation: { ru: "На истории мы узнаем о старинных замках и королях.", ua: "На історії ми дізнаємося про старовинні замки та королів." } },
+      { word: "Music", ipa: "[ˈmjuːzɪk]", translation: { ru: "музыка", ua: "музика" }, emoji: "🎵", example: "We sing songs and play instruments in Music class.", exampleTranslation: { ru: "Мы поем песни и играем на инструментах на уроке музыки.", ua: "Ми співаємо пісні та граємо на інструментах на уроці музики." } },
+      { word: "English", ipa: "[ˈɪŋɡlɪʃ]", translation: { ru: "английский", ua: "англійська" }, emoji: "🇬🇧", example: "English is spoken by millions of people worldwide.", exampleTranslation: { ru: "На английском говорят миллионы людей во всем мире.", ua: "Англійською розмовляють мільйони людей у всьому світі." } },
+      { word: "Math", ipa: "[mæθ]", translation: { ru: "математика", ua: "математика" }, emoji: "➗", example: "We solve equations during Math class.", exampleTranslation: { ru: "Мы решаем уравнения на уроке математики.", ua: "Ми розв'язуємо рівняння на уроці математики." } },
+      { word: "French", ipa: "[frentʃ]", translation: { ru: "французский", ua: "французька" }, emoji: "🇫🇷", example: "Bonjour is the first word we learned in French.", exampleTranslation: { ru: "Bonjour — первое слово, которое мы выучили по-французски.", ua: "Bonjour — перше слово, яке ми вивчили французькою." } },
+      { word: "ICT", ipa: "[ˌaɪ siː ˈtiː]", translation: { ru: "информатика", ua: "інформатика" }, emoji: "💻", example: "We practice coding and typing in the ICT lab.", exampleTranslation: { ru: "Мы практикуем программирование в кабинете информатики.", ua: "Ми практикуємо програмування у кабінеті інформатики." } },
+      { word: "PE", ipa: "[ˌpiː ˈiː]", translation: { ru: "физкультура", ua: "фізкультура" }, emoji: "⚽", example: "We run around the gym and play basketball in PE.", exampleTranslation: { ru: "Мы бегаем по спортзалу и играем в баскетбол на физкультуре.", ua: "Ми бігаємо спортзалом і граємо у баскетбол на фізкультурі." } },
+      { word: "Literature", ipa: "[ˈlɪtrətʃər]", translation: { ru: "литература", ua: "література" }, emoji: "📖", example: "We read classic poems and novels in Literature.", exampleTranslation: { ru: "Мы читаем классические стихи и романы на литературе.", ua: "Ми читаємо класичні вірші та романи на літературі." } },
+      { word: "Science", ipa: "[ˈsaɪəns]", translation: { ru: "наука", ua: "наука" }, emoji: "🔬", example: "We look through microscopes in Science class.", exampleTranslation: { ru: "Мы смотрим в микроскопы на уроке науки.", ua: "Ми дивимося у мікроскопи на уроці науки." } },
+      { word: "Geography", ipa: "[dʒiˈɒɡrəfi]", translation: { ru: "география", ua: "географія" }, emoji: "🗺️", example: "We explore rivers, continents and capitals in Geography.", exampleTranslation: { ru: "Мы изучаем реки, континенты и столицы на географии.", ua: "Ми вивчаємо річки, континенти та столиці на географії." } },
+      { word: "Social Science", ipa: "[ˌsəʊʃl ˈsaɪəns]", translation: { ru: "человек и мир", ua: "людина і світ" }, emoji: "🌍", example: "Social Science teaches us about society and civic life.", exampleTranslation: { ru: "Обществознание учит нас об обществе и жизни.", ua: "Людина і світ вчить нас про суспільство та життя." } }
+    ]
+  },
+  {
+    id: "question_words",
+    title: { ru: "Вопросительные слова", ua: "Питальні слова" },
+    description: { ru: "Слова для построения вопросов в английском языке.", ua: "Слова для побудови запитань в англійській мові." },
+    difficulty: "Elementary",
+    icon: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H6c0-3.31 2.69-6 6-6s6 2.69 6 6c0 1.3-.52 2.49-1.93 3.25z"/></svg>`,
+    color: "#e11d48",
+    words: [
+      { word: "What", ipa: "[wɒt]", translation: { ru: "что, какой", ua: "що, який" }, emoji: "❓", example: "What is your favorite book?", exampleTranslation: { ru: "Какая твоя любимая книга?", ua: "Яка твоя улюблена книга?" } },
+      { word: "When", ipa: "[wen]", translation: { ru: "когда", ua: "коли" }, emoji: "⏰", example: "When does the English lesson begin?", exampleTranslation: { ru: "Когда начинается урок английского?", ua: "Коли починається урок англійської?" } },
+      { word: "Why", ipa: "[waɪ]", translation: { ru: "почему", ua: "чому" }, emoji: "🤔", example: "Why are you smiling so happily?", exampleTranslation: { ru: "Почему ты так счастливо улыбаешься?", ua: "Чому ти так щасливо посміхаєшся?" } },
+      { word: "Where", ipa: "[weər]", translation: { ru: "где, куда", ua: "де" }, emoji: "📍", example: "Where is the nearest library?", exampleTranslation: { ru: "Где ближайшая библиотека?", ua: "Де найближча бібліотека?" } },
+      { word: "Which", ipa: "[wɪtʃ]", translation: { ru: "который, какой", ua: "котрий" }, emoji: "👉", example: "Which color do you prefer, blue or green?", exampleTranslation: { ru: "Какой цвет ты предпочитаешь: синий или зеленый?", ua: "Якому кольору ти віддаєш перевагу: синьому чи зеленому?" } },
+      { word: "Who", ipa: "[huː]", translation: { ru: "кто", ua: "хто" }, emoji: "👤", example: "Who is that friendly boy with the skateboard?", exampleTranslation: { ru: "Кто тот дружелюбный мальчик со скейтбордом?", ua: "Хто той дружелюбний хлопець зі скейтбордом?" } },
+      { word: "Whose", ipa: "[huːz]", translation: { ru: "чей", ua: "чий" }, emoji: "🎒", example: "Whose backpack is left on the desk?", exampleTranslation: { ru: "Чей рюкзак остался на парте?", ua: "Чий рюкзак залишився на парті?" } },
+      { word: "Whom", ipa: "[huːm]", translation: { ru: "кого, кому", ua: "кого, кому" }, emoji: "👥", example: "Whom did you invite to your birthday party?", exampleTranslation: { ru: "Кого ты пригласил на свой день рождения?", ua: "Кого ти запросив на свій день народження?" } },
+      { word: "How", ipa: "[haʊ]", translation: { ru: "как", ua: "як" }, emoji: "💡", example: "How do you spell this English word?", exampleTranslation: { ru: "Как пишется это английское слово?", ua: "Як пишеться це англійське слово?" } },
+      { word: "How many", ipa: "[haʊ ˈmeni]", translation: { ru: "сколько", ua: "скільки" }, emoji: "🔢", example: "How many apples are there in the basket?", exampleTranslation: { ru: "Сколько яблок в корзине?", ua: "Скільки яблук у кошику?" } },
+      { word: "How long", ipa: "[haʊ lɒŋ]", translation: { ru: "как долго", ua: "як довго" }, emoji: "⏳", example: "How long does it take to get to school?", exampleTranslation: { ru: "Как долго добираться до школы?", ua: "Як довго добиратися до школи?" } }
+    ]
+  },
+  {
+    id: "furniture",
+    title: { ru: "Мебель", ua: "Меблі" },
+    description: { ru: "Мебель, предметы интерьера и бытовая техника.", ua: "Меблі, предмети інтер'єру та побутова техніка." },
+    difficulty: "Elementary",
+    icon: `<svg viewBox="0 0 24 24"><path d="M20 10V7c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v3c-1.1 0-2 .9-2 2v5h1.33L4 21h2l.67-4h10.67l.66 4h2l.67-4H22v-5c0-1.1-.9-2-2-2zm-9 0H6V7h5v3zm7 0h-5V7h5v3z"/></svg>`,
+    color: "#84cc16",
+    words: [
+      { word: "armchair", ipa: "[ˈɑːmtʃeər]", translation: { ru: "кресло", ua: "крісло" }, emoji: "🪑", example: "Grandpa loves reading in his comfy armchair.", exampleTranslation: { ru: "Дедушка любит читать в своем удобном кресле.", ua: "Дідусь любить читати у своєму зручному кріслі." } },
+      { word: "stool", ipa: "[stuːl]", translation: { ru: "табуретка", ua: "табуретка" }, emoji: "🪵", example: "He sat on a wooden stool by the counter.", exampleTranslation: { ru: "Он сел на деревянную табуретку у стойки.", ua: "Він сів на дерев'яну табуретку біля стійки." } },
+      { word: "chair", ipa: "[tʃeər]", translation: { ru: "стул", ua: "стілець" }, emoji: "🪑", example: "Pull up a chair and join our table.", exampleTranslation: { ru: "Подвинь стул и присоединяйся к нам.", ua: "Підсунь стілець та приєднуйся до нас." } },
+      { word: "bed", ipa: "[bed]", translation: { ru: "кровать", ua: "ліжко" }, emoji: "🛏️", example: "I make my bed every morning.", exampleTranslation: { ru: "Я заправляю кровать каждое утро.", ua: "Я заправляю ліжко щоранку." } },
+      { word: "table", ipa: "[ˈteɪbl]", translation: { ru: "стол", ua: "стіл" }, emoji: "🍽️", example: "We set the dining table for dinner.", exampleTranslation: { ru: "Мы накрываем обеденный стол к ужину.", ua: "Ми накриваємо обідній стіл до вечері." } },
+      { word: "bookcase", ipa: "[ˈbʊkkeɪs]", translation: { ru: "книжный шкаф", ua: "книжкова шафа" }, emoji: "📚", example: "The bookcase is filled with fantasy novels.", exampleTranslation: { ru: "Книжный шкаф заполнен романами.", ua: "Книжкова шафа заповнена романами." } },
+      { word: "shelf", ipa: "[ʃelf]", translation: { ru: "полка", ua: "поличка" }, emoji: "📖", example: "Put the trophies on the top shelf.", exampleTranslation: { ru: "Поставь кубки на верхнюю полку.", ua: "Постав кубки на верхню поличку." } },
+      { word: "desk", ipa: "[desk]", translation: { ru: "письменный стол", ua: "письмовий стіл" }, emoji: "💻", example: "Keep your study desk neat and tidy.", exampleTranslation: { ru: "Держи свой письменный стол в чистоте.", ua: "Тримай свій письмовий стіл у чистоті." } },
+      { word: "clock", ipa: "[klɒk]", translation: { ru: "часы", ua: "годинник" }, emoji: "⏰", example: "The wall clock shows half past seven.", exampleTranslation: { ru: "Настенные часы показывают половину восьмого.", ua: "Настінний годинник показує пів на восьму." } },
+      { word: "bench", ipa: "[bentʃ]", translation: { ru: "лавка", ua: "лавка" }, emoji: "🌳", example: "We sat on a wooden park bench.", exampleTranslation: { ru: "Мы сидели на деревянной скамейке в парке.", ua: "Ми сиділи на дерев'яній лавці у парку." } },
+      { word: "mirror", ipa: "[ˈmɪrər]", translation: { ru: "зеркало", ua: "дзеркало" }, emoji: "🪞", example: "There is a large mirror in the hallway.", exampleTranslation: { ru: "В прихожей висит большое зеркало.", ua: "У передпокої висить велике дзеркало." } },
+      { word: "sofa", ipa: "[ˈsəʊfə]", translation: { ru: "диван", ua: "диван" }, emoji: "🛋️", example: "Our soft sofa is great for movie nights.", exampleTranslation: { ru: "Наш мягкий диван отлично подходит для кино.", ua: "Наш м'який диван чудово підходить для кіно." } },
+      { word: "wardrobe", ipa: "[ˈwɔːdrəʊb]", translation: { ru: "шкаф", ua: "шафа" }, emoji: "🚪", example: "Hang your coats inside the wardrobe.", exampleTranslation: { ru: "Повесь куртки в шкаф.", ua: "Повісь куртки у шафу." } },
+      { word: "cupboard", ipa: "[ˈkʌbəd]", translation: { ru: "кухонный шкаф", ua: "кухонна шафа" }, emoji: "🗄️", example: "Cups are kept in the kitchen cupboard.", exampleTranslation: { ru: "Чашки хранятся в кухонном шкафу.", ua: "Чашки зберігаються у кухонній шафі." } },
+      { word: "lamp", ipa: "[læmp]", translation: { ru: "лампа", ua: "лампа" }, emoji: "💡", example: "Turn on the desk lamp when you read.", exampleTranslation: { ru: "Включи лампу, когда читаешь.", ua: "Увімкни лампу, коли читаєш." } },
+      { word: "picture", ipa: "[ˈpɪktʃər]", translation: { ru: "картина", ua: "картина" }, emoji: "🖼️", example: "A colorful picture hangs above the fireplace.", exampleTranslation: { ru: "Красочная картина висит над камином.", ua: "Барвиста картина висить над каміном." } },
+      { word: "fridge", ipa: "[frɪdʒ]", translation: { ru: "холодильник", ua: "холодильник" }, emoji: "🧊", example: "Keep milk and cheese inside the fridge.", exampleTranslation: { ru: "Храни молоко и сыр в холодильнике.", ua: "Зберігай молоко та сир у холодильнику." } },
+      { word: "TV", ipa: "[ˌtiː ˈviː]", translation: { ru: "телевизор", ua: "телевізор" }, emoji: "📺", example: "We watch documentaries on TV.", exampleTranslation: { ru: "Мы смотрим документальные фильмы по ТВ.", ua: "Ми дивимося документальні фільми по ТБ." } },
+      { word: "sink", ipa: "[sɪŋk]", translation: { ru: "мойка, раковина", ua: "мийка, раковина" }, emoji: "🚰", example: "Wash your hands at the bathroom sink.", exampleTranslation: { ru: "Помой руки в раковине.", ua: "Помий руки в раковині." } },
+      { word: "cooker", ipa: "[ˈkʊkər]", translation: { ru: "плита", ua: "плита" }, emoji: "🍳", example: "Mom prepared soup on the cooker.", exampleTranslation: { ru: "Мама приготовила суп на плите.", ua: "Мама приготувала суп на плиті." } },
+      { word: "washing machine", ipa: "[ˈwɒʃɪŋ məˌʃiːn]", translation: { ru: "стиральная машина", ua: "пральна машина" }, emoji: "🧺", example: "Put dirty shirts in the washing machine.", exampleTranslation: { ru: "Положи одежду в стиральную машину.", ua: "Поклади одяг у пральну машину." } },
+      { word: "bath", ipa: "[bɑːθ]", translation: { ru: "ванна", ua: "ванна" }, emoji: "🛁", example: "I like taking a warm bath with bubbles.", exampleTranslation: { ru: "Я люблю принимать теплую ванну с пеной.", ua: "Я люблю приймати теплу ванну з піною." } },
+      { word: "shower", ipa: "[ˈʃaʊər]", translation: { ru: "душ", ua: "душ" }, emoji: "🚿", example: "Take a quick shower after your workout.", exampleTranslation: { ru: "Прими быстрый душ после тренировки.", ua: "Прийми швидкий душ після тренування." } },
+      { word: "blanket", ipa: "[ˈblæŋkɪt]", translation: { ru: "одеяло", ua: "ковдра" }, emoji: "🛌", example: "Wrap yourself in a warm blanket.", exampleTranslation: { ru: "Закутайся в теплое одеяло.", ua: "Закутайся у теплу ковдру." } },
+      { word: "pillow", ipa: "[ˈpɪləʊ]", translation: { ru: "подушка", ua: "подушка" }, emoji: "🛏️", example: "This soft pillow is very comfortable.", exampleTranslation: { ru: "Эта мягкая подушка очень удобная.", ua: "Ця м'яка подушка дуже зручна." } },
+      { word: "phone", ipa: "[fəʊn]", translation: { ru: "телефон", ua: "телефон" }, emoji: "📱", example: "My phone rang during dinner.", exampleTranslation: { ru: "Мой телефон зазвонил за ужином.", ua: "Мій телефон задзвонив за вечерею." } },
+      { word: "paintings", ipa: "[ˈpeɪntɪŋz]", translation: { ru: "картины", ua: "картини" }, emoji: "🎨", example: "The gallery exhibits beautiful oil paintings.", exampleTranslation: { ru: "В галерее выставлены красивые картины маслом.", ua: "У галереї виставлені красиві картини олією." } },
+      { word: "floor", ipa: "[flɔːr]", translation: { ru: "пол", ua: "підлога" }, emoji: "🪜", example: "The clean wooden floor looks shiny.", exampleTranslation: { ru: "Чистый деревянный пол блестит.", ua: "Чиста дерев'яна підлога блищить." } }
+    ]
+  },
+  {
+    id: "weather",
+    title: { ru: "Погода", ua: "Погода" },
+    description: { ru: "Погодные условия, температура и природные явления.", ua: "Погодні умови, температура та природні явища." },
+    difficulty: "Intermediate",
+    icon: `<svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>`,
+    color: "#0ea5e9",
+    words: [
+      { word: "flood", ipa: "[flʌd]", translation: { ru: "наводнение", ua: "повінь" }, emoji: "🌊", example: "Heavy rain caused a sudden flood in the valley.", exampleTranslation: { ru: "Проливной дождь вызвал наводнение в долине.", ua: "Проливний дощ спричинив повінь у долині." } },
+      { word: "tornado", ipa: "[tɔːˈneɪdəʊ]", translation: { ru: "торнадо", ua: "торнадо" }, emoji: "🌪️", example: "A powerful tornado swept through the fields.", exampleTranslation: { ru: "Мощное торнадо пронеслось по полям.", ua: "Потужне торнадо пронеслося полями." } },
+      { word: "earthquake", ipa: "[ˈɜːθkweɪk]", translation: { ru: "землетрясение", ua: "землетрус" }, emoji: "🏚️", example: "The earthquake shook buildings across the city.", exampleTranslation: { ru: "Землетрясение потрясло здания по всему городу.", ua: "Землетрус струснув будівлі по всьому місту." } },
+      { word: "thunderstorm", ipa: "[ˈθʌndəstɔːm]", translation: { ru: "гроза", ua: "гроза" }, emoji: "⛈️", example: "Bright lightning flashed during the thunderstorm.", exampleTranslation: { ru: "Яркая молния сверкнула во время грозы.", ua: "Яскрава блискавка блиснула під час грози." } },
+      { word: "mudslide", ipa: "[ˈmʌdslaɪd]", translation: { ru: "оползень, сель", ua: "зсув землі" }, emoji: "⛰️", example: "The mudslide blocked the mountain road.", exampleTranslation: { ru: "Оползень заблокировал горную дорогу.", ua: "Зсув землі заблокував гірську дорогу." } },
+      { word: "avalanche", ipa: "[ˈævəlɑːnʃ]", translation: { ru: "лавина", ua: "лавина" }, emoji: "🏔️", example: "The loud roar signaled an avalanche on the mountain.", exampleTranslation: { ru: "Громкий рев возвестил о сходе лавины.", ua: "Гучний гуркіт сповістив про схід лавини." } },
+      { word: "volcanic eruption", ipa: "[vɒlˈkænɪk ɪˈrʌpʃn]", translation: { ru: "извержение вулкана", ua: "виверження вулкана" }, emoji: "🌋", example: "Ash covered the sky after the volcanic eruption.", exampleTranslation: { ru: "Пепел покрыл небо после извержения вулкана.", ua: "Попіл вкрив небо після виверження вулкана." } },
+      { word: "tsunami", ipa: "[tsuːˈnɑːmi]", translation: { ru: "цунами", ua: "цунамі" }, emoji: "🌊", example: "A giant tsunami wave hit the coast.", exampleTranslation: { ru: "Гигантская волна цунами обрушилась на побережье.", ua: "Гігантська хвиля цунамі обрушилася на узбережжя." } },
+      { word: "forest fire", ipa: "[ˈfɒrɪst ˈfaɪər]", translation: { ru: "лесной пожар", ua: "лісова пожежа" }, emoji: "🌲🔥", example: "Firefighters worked bravely to stop the forest fire.", exampleTranslation: { ru: "Пожарные смело боролись с лесным пожаром.", ua: "Пожежники сміливо боролися з лісовою пожежею." } },
+      { word: "sunny", ipa: "[ˈsʌni]", translation: { ru: "солнечно", ua: "сонячно" }, emoji: "☀️", example: "It is a bright and sunny afternoon.", exampleTranslation: { ru: "Сегодня яркий и солнечный день.", ua: "Сьогодні яскравий і сонячний день." } },
+      { word: "foggy", ipa: "[ˈfɒɡi]", translation: { ru: "туманно", ua: "туман" }, emoji: "🌫️", example: "Drive slowly in foggy weather.", exampleTranslation: { ru: "Езжайте медленно в туманную погоду.", ua: "Їдьте повільно у туманну погоду." } },
+      { word: "stormy", ipa: "[ˈstɔːmi]", translation: { ru: "гроза, шторм", ua: "гроза, шторм" }, emoji: "🌩️", example: "The stormy sea tossed the small boats.", exampleTranslation: { ru: "Штормовое море бросало лодки.", ua: "Штормове море кидало човни." } },
+      { word: "snowy", ipa: "[ˈsnəʊi]", translation: { ru: "снежно", ua: "сніжно" }, emoji: "❄️", example: "We made a snowman on a snowy day.", exampleTranslation: { ru: "Мы слепили снеговика в снежный день.", ua: "Ми зліпили сніговика у сніжний день." } },
+      { word: "cloudy", ipa: "[ˈklaʊdi]", translation: { ru: "облачно", ua: "хмарно" }, emoji: "☁️", example: "The sky is cloudy, it might rain.", exampleTranslation: { ru: "Небо облачное, может пойти дождь.", ua: "Небо хмарне, може піти дощ." } },
+      { word: "rainy", ipa: "[ˈreɪni]", translation: { ru: "дождь", ua: "дощ" }, emoji: "🌧️", example: "Do not forget your umbrella on a rainy day.", exampleTranslation: { ru: "Не забудь зонт в дождливый день.", ua: "Не забудь парасольку у дощовий день." } },
+      { word: "humid", ipa: "[ˈhjuːmɪd]", translation: { ru: "влажность", ua: "вологість" }, emoji: "💧", example: "The tropical air feels warm and humid.", exampleTranslation: { ru: "Тропический воздух теплый и влажный.", ua: "Тропічне повітря тепле і вологе." } },
+      { word: "windy", ipa: "[ˈwɪndi]", translation: { ru: "ветер", ua: "вітер" }, emoji: "💨", example: "Flying a kite is fun when it is windy.", exampleTranslation: { ru: "Запускать змея весело, когда ветрено.", ua: "Запускати змія весело, коли вітряно." } },
+      { word: "hail", ipa: "[heɪl]", translation: { ru: "град", ua: "град" }, emoji: "🧊", example: "Pieces of ice fell from the sky as hail.", exampleTranslation: { ru: "Кусочки льда падали с неба в виде града.", ua: "Шматочки льоду падали з неба у вигляді граду." } },
+      { word: "chilly", ipa: "[ˈtʃɪli]", translation: { ru: "прохладно", ua: "прохолодно" }, emoji: "🥶", example: "Put on a sweater, the morning is chilly.", exampleTranslation: { ru: "Надень свитер, утро прохладное.", ua: "Одягни светр, ранок прохолодний." } },
+      { word: "cool", ipa: "[kuːl]", translation: { ru: "прохладно", ua: "прохолодно" }, emoji: "🍃", example: "A cool breeze blew from the lake.", exampleTranslation: { ru: "Прохладный ветерок дул с озера.", ua: "Прохолодний вітерець віяв з озера." } },
+      { word: "blizzard", ipa: "[ˈblɪzəd]", translation: { ru: "метель", ua: "хуртовина" }, emoji: "🌨️", example: "A fierce blizzard covered the town in snow.", exampleTranslation: { ru: "Лютая метель засыпала город снегом.", ua: "Люта хуртовина засипала місто снігом." } },
+      { word: "freezing", ipa: "[ˈfriːzɪŋ]", translation: { ru: "морозно", ua: "морозно" }, emoji: "🧊", example: "It is freezing outside, wear warm gloves.", exampleTranslation: { ru: "На улице морозно, надень теплые перчатки.", ua: "На вулиці морозно, одягни теплі рукавички." } },
+      { word: "boiling", ipa: "[ˈbɔɪlɪŋ]", translation: { ru: "спека, зной", ua: "спека" }, emoji: "🥵", example: "It was boiling hot at midday on the beach.", exampleTranslation: { ru: "В полдень на пляже была невыносимая жара.", ua: "Опівдні на пляжі була нестерпна спека." } },
+      { word: "drought", ipa: "[draʊt]", translation: { ru: "засуха", ua: "засуха" }, emoji: "🌵", example: "The long drought left the river completely dry.", exampleTranslation: { ru: "Долгая засуха оставила реку сухой.", ua: "Тривала засуха залишила річку сухою." } }
+    ]
+  },
+  {
+    id: "relationships",
+    title: { ru: "Отношения", ua: "Стосунки" },
+    description: { ru: "Дружба, доверие, взаимопонимание и общение.", ua: "Дружба, довіра, взаєморозуміння та спілкування." },
+    difficulty: "Intermediate",
+    icon: `<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`,
+    color: "#f43f5e",
+    words: [
+      { word: "Friendship", ipa: "[ˈfrendʃɪp]", translation: { ru: "дружба", ua: "дружба" }, emoji: "🤝", example: "True friendship is a treasure.", exampleTranslation: { ru: "Настоящая дружба — это сокровище.", ua: "Справжня дружба — це скарб." } },
+      { word: "Support", ipa: "[səˈpɔːrt]", translation: { ru: "поддержка / поддерживать", ua: "підтримка / підтримувати" }, emoji: "❤️", example: "Friends support each other in hard moments.", exampleTranslation: { ru: "Друзья поддерживают друг друга в трудные моменты.", ua: "Друзі підтримують один одного у скрутні моменти." } },
+      { word: "Honesty", ipa: "[ˈɒnəsti]", translation: { ru: "честность", ua: "чесність" }, emoji: "😇", example: "Honesty is very important between friends.", exampleTranslation: { ru: "Честность очень важна между друзьями.", ua: "Чесність дуже важлива між друзями." } },
+      { word: "Trust", ipa: "[trʌst]", translation: { ru: "доверие / доверять", ua: "довіра / довіряти" }, emoji: "🔒", example: "Trust takes time to build.", exampleTranslation: { ru: "Доверие строится со временем.", ua: "Довіра будується з часом." } },
+      { word: "Respect", ipa: "[rɪˈspekt]", translation: { ru: "уважение / уважать", ua: "повага / поважати" }, emoji: "🙌", example: "Always show respect to other people.", exampleTranslation: { ru: "Всегда проявляй уважение к другим людям.", ua: "Завжди виявляй повагу до інших людей." } },
+      { word: "Loyalty", ipa: "[ˈlɔɪəlti]", translation: { ru: "верность, преданность", ua: "вірність, відданість" }, emoji: "🐕", example: "Loyalty makes any friendship stronger.", exampleTranslation: { ru: "Преданность делает любую дружбу крепче.", ua: "Відданість робить будь-яку дружбу міцнішою." } },
+      { word: "Forgiveness", ipa: "[fəˈɡɪvnəs]", translation: { ru: "прощение", ua: "прощення" }, emoji: "🕊️", example: "Forgiveness helps heal friendships.", exampleTranslation: { ru: "Прощение помогает исцелить дружбу.", ua: "Прощення допомагає зцілити дружбу." } },
+      { word: "Communication", ipa: "[kəˌmjuːnɪˈkeɪʃn]", translation: { ru: "общение, коммуникация", ua: "спілкування" }, emoji: "💬", example: "Clear communication prevents misunderstandings.", exampleTranslation: { ru: "Понятное общение предотвращает недопонимания.", ua: "Зрозуміле спілкування запобігає непорозумінням." } }
+    ]
+  },
+  {
+    id: "grammar_question_tags",
+    title: { ru: "Разделительные вопросы (Question Tags)", ua: "Розділові запитання (Question Tags)" },
+    description: { ru: "Правило 'Чи не так?': вспомогательные глаголы, отрицание и местоимения в конце предложения.", ua: "Правило 'Чи не так?': допоміжні дієслова, заперечення та займенники в кінці речення." },
+    difficulty: "Grammar",
+    icon: `<svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>`,
+    color: "#8b5cf6",
+    words: [
+      { word: "Question Tag (Чи не так?)", ipa: "[rule: , + aux + pronoun?]", translation: { ru: "«Не так ли?»: ставим кому, вспомогательный глагол в противоположной форме, местоимение и '?'", ua: "«Чи не так?»: ставимо кому, допоміжне дієслово у протилежній формі, займенник і '?'" }, emoji: "❓", example: "It is a cat, isn't it?", exampleTranslation: { ru: "Это кот, не так ли? (+ основа -> - хвостик)", ua: "Це кіт, чи не так? (+ основа -> - хвостик)" } },
+      { word: "Verb to be (is / are)", ipa: "[is -> isn't / are -> aren't]", translation: { ru: "Если в основе IS или ARE, в хвостике ставим isn't или aren't + местоимение.", ua: "Якщо в основі IS або ARE, у хвостику ставимо isn't або aren't + займенник." }, emoji: "🐱", example: "We are happy, aren't we?", exampleTranslation: { ru: "Мы счастливы, не правда ли?", ua: "Ми щасливі, чи не так?" } },
+      { word: "Modal verb CAN", ipa: "[can -> can't she?]", translation: { ru: "Модальный глагол CAN переходит в CAN'T. Имя Mary заменяем на местоимение she.", ua: "Модальне дієслово CAN переходить у CAN'T. Ім'я Mary замінюємо на займенник she." }, emoji: "🍳", example: "Mary can cook, can't she?", exampleTranslation: { ru: "Мэри умеет готовить, не так ли?", ua: "Мері вміє готувати, чи не так?" } },
+      { word: "Future WILL (won't)", ipa: "[will -> won't she?]", translation: { ru: "Будущее время WILL в хвостике превращается в WON'T (will not). My mum -> she.", ua: "Майбутній час WILL у хвостику перетворюється на WON'T (will not). My mum -> she." }, emoji: "💼", example: "My mum will work, won't she?", exampleTranslation: { ru: "Моя мама будет работать, не так ли?", ua: "Моя мама буде працювати, чи не так?" } },
+      { word: "Negative to Positive (- -> +)", ipa: "[don't read -> do they?]", translation: { ru: "Если основа отрицательная (-), то хвостик утвердительный (+)! Children -> they.", ua: "Якщо основа заперечна (-), то хвостик стверджувальний (+)! Children -> they." }, emoji: "📖", example: "Children don't read, do they?", exampleTranslation: { ru: "Дети не читают, правда?", ua: "Діти не читають, чи не так?" } },
+      { word: "Auxiliary Verbs List", ipa: "[will, have, is, has, can, do, did...]", translation: { ru: "Допоміжні дієслова: will, have, is, has, am, are, can, do, did, does, would, was, were, should", ua: "Допоміжні дієслова: will, have, is, has, am, are, can, do, did, does, would, was, were, should" }, emoji: "📋", example: "He was tired, wasn't he?", exampleTranslation: { ru: "Он устал, не так ли?", ua: "Він втомився, чи не так?" } },
+      { word: "Present Simple (do / does)", ipa: "[plays -> doesn't he?]", translation: { ru: "Если нет to be или модального глагола, в хвостике используем do/does в настоящем времени.", ua: "Якщо немає to be або модального дієслова, у хвостику використовуємо do/does у теперішньому часі." }, emoji: "⚽", example: "Tom plays football, doesn't he?", exampleTranslation: { ru: "Том играет в футбол, не так ли?", ua: "Том грає у футбол, чи не так?" } },
+      { word: "Pronoun in Tag", ipa: "[always use pronoun: he, she, it, they]", translation: { ru: "В конце всегда пишем КТО в виде местоимения (he, she, it, they, we...), а не имя!", ua: "В кінці завжди пишемо ХТО у вигляді займенника (he, she, it, they, we...), а не ім'я!" }, emoji: "👥", example: "The car is new, isn't it?", exampleTranslation: { ru: "Машина новая, правда? (The car -> it)", ua: "Машина нова, чи не так? (The car -> it)" } }
+    ]
+  },
+  {
+    id: "grammar_too_enough",
+    title: { ru: "too и enough", ua: "too та enough" },
+    description: { ru: "too (слишком) перед прилагательными, enough (достаточно) после прилагательных и перед существительными.", ua: "too (занадто) перед прикметниками, enough (достатньо) після прикметників та перед іменниками." },
+    difficulty: "Grammar",
+    icon: `<svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>`,
+    color: "#f59e0b",
+    words: [
+      { word: "TOO + Adjective", ipa: "[too + adj = занадто...]", translation: { ru: "too переводится 'слишком/чересчур' и ставится ПЕРЕД прилагательными.", ua: "too перекладається 'занадто' і ставиться ПЕРЕД прикметниками." }, emoji: "📏", example: "This rope is too long.", exampleTranslation: { ru: "Эта веревка слишком длинная.", ua: "Ця мотузка занадто довга." } },
+      { word: "too cold & too small", ipa: "[too cold / too small / too big]", translation: { ru: "too cold — слишком холодный; too small — слишком маленький; too big — слишком большой.", ua: "too cold — занадто холодний; too small — занадто малий; too big — занадто великий." }, emoji: "🥶", example: "The water is too cold to swim.", exampleTranslation: { ru: "Вода слишком холодная, чтобы плавать.", ua: "Вода занадто холодна, щоб плавати." } },
+      { word: "Adjective + ENOUGH", ipa: "[adj + enough = достатньо...]", translation: { ru: "enough (инаф) переводится 'достаточно' и ставится ПОСЛЕ прилагательного!", ua: "enough (інаф) перекладається 'достатньо' і ставиться ПІСЛЯ прикметника!" }, emoji: "✅", example: "This room is big enough for us.", exampleTranslation: { ru: "Эта комната достаточно большая для нас.", ua: "Ця кімната достатньо велика для нас." } },
+      { word: "cold enough & cheap enough", ipa: "[adj + enough examples]", translation: { ru: "cold enough — достаточно холодный; cheap enough — достаточно дешевый.", ua: "cold enough — достатньо холодний; cheap enough — достатньо дешевий." }, emoji: "🏷️", example: "This jacket is cheap enough to buy.", exampleTranslation: { ru: "Эта куртка достаточно дешевая, чтобы ее купить.", ua: "Ця куртка достатньо дешева, щоб її купити." } },
+      { word: "ENOUGH + Noun", ipa: "[enough + noun = достатньо чогось]", translation: { ru: "НО: перед существительными (предметами) enough ставится СПЕРЕДИ!", ua: "АЛЕ: перед іменниками (предметами) enough ставиться ПОПЕРЕДУ!" }, emoji: "🥛", example: "We have enough milk for breakfast.", exampleTranslation: { ru: "У нас достаточно молока на завтрак.", ua: "У нас достатньо молока на сніданок." } },
+      { word: "enough sugar & enough books", ipa: "[enough + noun examples]", translation: { ru: "enough sugar — достаточно сахара; enough books — достаточно книг; enough time — достаточно времени.", ua: "enough sugar — достатньо цукру; enough books — достатньо книг; enough time — достатньо часу." }, emoji: "📚", example: "Do you have enough books to read?", exampleTranslation: { ru: "У тебя достаточно книг для чтения?", ua: "У тебе достатньо книжок для читання?" } },
+      { word: "Formula: too vs enough", ipa: "[too big vs big enough]", translation: { ru: "Запомни: TOO идет спереди (too big), а ENOUGH идет сзади (big enough)!", ua: "Запам'ятай: TOO йде спереду (too big), а ENOUGH йде позаду (big enough)!" }, emoji: "🔄", example: "The shoes are too big, they aren't small enough.", exampleTranslation: { ru: "Туфли слишком большие, они недостаточно маленькие.", ua: "Туфлі занадто великі, вони недостатньо малі." } },
+      { word: "Not enough", ipa: "[not + adj + enough = недостатньо]", translation: { ru: "not ... enough означает 'недостаточно' (не хватает нужного качества).", ua: "not ... enough означає 'недостатньо' (не вистачає потрібної якості)." }, emoji: "⛔", example: "He is not old enough to drive.", exampleTranslation: { ru: "Он недостаточно взрослый, чтобы водить.", ua: "Він недостатньо дорослий, щоб водити." } }
+    ]
+  },
+  {
+    id: "grammar_many_much",
+    title: { ru: "many и much (Много)", ua: "many та much (Багато)" },
+    description: { ru: "many для исчисляемых (cars, dogs), much для неисчисляемых (water, money, time, sugar).", ua: "many для злічуваних (cars, dogs), much для незлічуваних (water, money, time, sugar)." },
+    difficulty: "Grammar",
+    icon: `<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/></svg>`,
+    color: "#0284c7",
+    words: [
+      { word: "MANY (для злічуваних)", ipa: "[many + countable plural]", translation: { ru: "many переводится 'много' и употребляется со исчисляемыми предметами во множественном числе.", ua: "many перекладається 'багато' і вживається зі злічуваними предметами у множині." }, emoji: "🚗", example: "There are many cars on the road.", exampleTranslation: { ru: "На дороге много машин.", ua: "На дорозі багато машин." } },
+      { word: "MUCH (для незлічуваних)", ipa: "[much + uncountable]", translation: { ru: "much переводится 'много' и употребляется с неисчисляемыми существительными.", ua: "much перекладається 'багато' і вживається тільки з незлічуваними іменниками." }, emoji: "🥛", example: "There is much milk in the fridge.", exampleTranslation: { ru: "В холодильнике много молока.", ua: "У холодильнику багато молока." } },
+      { word: "Uncountable: liquids & food", ipa: "[water, coffee, tea, honey, cheese, butter]", translation: { ru: "Незлічувані (much): рідина (вода, кава, чай), мед (honey), сир (cheese), масло (butter), м'ясо (meat).", ua: "Незлічувані (much): рідина (вода, кава, чай), мед (honey), сир (cheese), масло (butter), м'ясо (meat)." }, emoji: "☕", example: "We drink much tea and much water.", exampleTranslation: { ru: "Мы пьем много чая и много воды.", ua: "Ми п'ємо багато чаю та багато води." } },
+      { word: "many dogs & many sisters", ipa: "[many + plural nouns]", translation: { ru: "Злічувані (many): собаки (many dogs), сестры (many sisters), книги (many books), друзья (many friends).", ua: "Злічувані (many): собаки (many dogs), сестри (many sisters), книжки (many books), друзі (many friends)." }, emoji: "🐕", example: "He has many dogs and two sisters.", exampleTranslation: { ru: "У него много собак и две сестры.", ua: "У нього багато собак і дві сестри." } },
+      { word: "Uncountable: money & time", ipa: "[money & time = uncountable]", translation: { ru: "Деньги (money) и время (time) — НЕИСЧИСЛЯЕМЫЕ! Говорим: much money, much time.", ua: "Гроші (money) та час (time) — НЕЗЛІЧУВАНІ! Кажемо: much money, much time." }, emoji: "💰", example: "I don't have much time or much money.", exampleTranslation: { ru: "У меня немного времени и немного денег.", ua: "У мене небагато часу і небагато грошей." } },
+      { word: "Uncountable: rice & bread", ipa: "[rice, bread, sugar = much]", translation: { ru: "Крупы и продукты: рис (rice), хлеб (bread), сахар (sugar) — неисчисляемые, с ними пишем MUCH.", ua: "Крупи та продукти: рис (rice), хліб (bread), цукор (sugar) — незлічувані, з ними пишемо MUCH." }, emoji: "🍚", example: "How much rice do you want?", exampleTranslation: { ru: "Сколько риса ты хочешь?", ua: "Скільки рису ти хочеш?" } },
+      { word: "How many? (Скільки?)", ipa: "[How many + countable plural?]", translation: { ru: "Вопрос 'How many...?' означает 'Сколько...?' для предметов, которые можно посчитать поштучно.", ua: "Питання 'How many...?' означає 'Скільки...?' для предметів, які можна порахувати поштучно." }, emoji: "🔢", example: "How many sisters do you have?", exampleTranslation: { ru: "Сколько у тебя сестер?", ua: "Скільки в тебе сестер?" } },
+      { word: "How much? (Скільки?)", ipa: "[How much + uncountable / price?]", translation: { ru: "Вопрос 'How much...?' означает 'Сколько...?' для неисчисляемых или 'Сколько стоит?'.", ua: "Питання 'How much...?' означає 'Скільки...?' для незлічуваних або 'Скільки коштує?'." }, emoji: "💵", example: "How much honey is left in the jar?", exampleTranslation: { ru: "Сколько меда осталось в банке?", ua: "Скільки меду залишилося в банці?" } }
+    ]
+  },
+  {
+    id: "grammar_some_any",
+    title: { ru: "some и any (Несколько / Сколько-нибудь)", ua: "some та any (Деяка кількість)" },
+    description: { ru: "some в утверждениях (+), any в вопросах (?) и отрицаниях (-). Вежливые просьбы с some.", ua: "some у ствердженнях (+), any у питаннях (?) та запереченнях (-). Ввічливі прохання із some." },
+    difficulty: "Grammar",
+    icon: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`,
+    color: "#14b8a6",
+    words: [
+      { word: "SOME (стверджувальні +)", ipa: "[some in positive (+)]", translation: { ru: "some означает 'немного, несколько' и ставится в УТВЕРДИТЕЛЬНЫХ (+) предложениях.", ua: "some означає 'трохи, кілька' і вживається у СТВЕРДЖУВАЛЬНИХ (+) реченнях." }, emoji: "➕", example: "I have some apples and some milk.", exampleTranslation: { ru: "У меня есть несколько яблок и немного молока.", ua: "У мене є кілька яблук і трохи молока." } },
+      { word: "ANY (питальні речення ?)", ipa: "[any in questions (?)]", translation: { ru: "any означает 'какой-нибудь' и употребляется в обычных ВОПРОСИТЕЛЬНЫХ (?) предложениях.", ua: "any означає 'який-небудь' і вживається у звичайних ПИТАЛЬНИХ (?) реченнях." }, emoji: "❓", example: "Do you have any questions or any pets?", exampleTranslation: { ru: "У тебя есть какие-нибудь вопросы или питомцы?", ua: "У тебе є якісь питання чи домашні улюбленці?" } },
+      { word: "ANY (заперечні речення -)", ipa: "[not + any in negative (-)]", translation: { ru: "any вместе с NOT означает 'никакой, нисколько' и ставится в ОТРИЦАТЕЛЬНЫХ (-) предложениях.", ua: "any разом із NOT означає 'жодного, аніскільки' і ставиться у ЗАПЕРЕЧНИХ (-) реченнях." }, emoji: "➖", example: "There isn't any cheese in the fridge.", exampleTranslation: { ru: "В холодильнике нет никакого сыра.", ua: "У холодильнику немає ніякого сиру." } },
+      { word: "Polite Offer: WOULD YOU LIKE SOME?", ipa: "[polite offer with would you like]", translation: { ru: "ВЫНЯТОК! При вежливом предложении угощения (Would you like...?) ставим SOME, а не any!", ua: "ВИНЯТОК! При ввічливій пропозиції пригостити (Would you like...?) ставимо SOME, а не any!" }, emoji: "🍵", example: "Would you like some tea?", exampleTranslation: { ru: "Хотите чаю? (вежливое предложение угощения)", ua: "Бажаєте чаю? (ввічлива пропозиція пригостити)" } },
+      { word: "Polite Request: CAN I HAVE SOME?", ipa: "[polite request with can / could]", translation: { ru: "ВЫНЯТОК! При вежливой просьбе (Can I have / Could I have...?) ставим SOME!", ua: "ВИНЯТОК! При ввічливому проханні (Can I have / Could I have...?) ставимо SOME!" }, emoji: "💧", example: "Can I have some water, please?", exampleTranslation: { ru: "Можно мне немного воды, пожалуйста?", ua: "Чи можна мені трохи води, будь ласка?" } },
+      { word: "Some with Plural Nouns", ipa: "[some + countable plural = кілька]", translation: { ru: "С исчисляемыми предметами во множественном числе some переводится как 'несколько'.", ua: "Зі злічуваними предметами у множині some перекладається як 'кілька'." }, emoji: "🍓", example: "She bought some fresh strawberries.", exampleTranslation: { ru: "Она купила несколько свежих ягод клубники.", ua: "Вона купила кілька свіжих ягід полуниці." } },
+      { word: "Some with Uncountable Nouns", ipa: "[some + uncountable = трохи]", translation: { ru: "С неисчисляемыми продуктами/веществами some переводится как 'немного'.", ua: "З незлічуваними продуктами/речовинами some перекладається як 'трохи'." }, emoji: "🧃", example: "Pour some juice into the glass.", exampleTranslation: { ru: "Налей немного сока в стакан.", ua: "Налий трохи соку в склянку." } },
+      { word: "Summary Rule: +, -, ?", ipa: "[+ some | - any | ? any | polite some]", translation: { ru: "Шпаргалка: (+) -> SOME; (-) -> ANY; (?) -> ANY; Вежливые Can/Would -> SOME.", ua: "Підказка: (+) -> SOME; (-) -> ANY; (?) -> ANY; Ввічливі Can/Would -> SOME." }, emoji: "📝", example: "I have some ideas, but I don't have any paper.", exampleTranslation: { ru: "У меня есть пара идей (+), но нет никакой бумаги (-).", ua: "У мене є пара ідей (+), але немає ніякого паперу (-)." } }
     ]
   }
 ];
@@ -938,6 +1250,610 @@ const QUIZZES_DATA = {
       emoji: "🧑‍🤝‍🧑",
       answer: "WE"
     }
+  ],
+  professions: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'dentist'?", ua: "Як перекладається слово 'dentist'?" },
+      emoji: "🦷",
+      choices: ["врач / лікар", "стоматолог", "повар / кухар", "пекарь / пекар"],
+      answer: "стоматолог"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Врач':", ua: "Збери слово 'Лікар':" },
+      emoji: "🩺",
+      answer: "DOCTOR"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: 'The ______ bakes fresh bread every morning.'", ua: "Встав слово: 'The ______ bakes fresh bread every morning.'" },
+      emoji: "🥖",
+      choices: ["farmer", "baker", "cleaner", "lawyer"],
+      answer: "baker"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Шеф-повар':", ua: "Збери слово 'Шеф повар':" },
+      emoji: "👨‍🍳",
+      answer: "CHEF"
+    },
+    {
+      type: "choice",
+      question: { ru: "Кто тушит пожары и спасает людей из огня?", ua: "Хто гасить пожежі та рятує людей з вогню?" },
+      emoji: "🚒",
+      choices: ["fireman", "judge", "clown", "gardener"],
+      answer: "fireman"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Медсестра':", ua: "Збери слово 'Медсестра':" },
+      emoji: "💉",
+      answer: "NURSE"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится 'hairdresser'?", ua: "Як перекладається 'hairdresser'?" },
+      emoji: "💇",
+      choices: ["парикмахер / парикхмахер", "художник", "секретарь / секретар", "водитель / водій"],
+      answer: "парикмахер / парикхмахер"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Певец':", ua: "Збери слово 'Співак':" },
+      emoji: "🎤",
+      answer: "SINGER"
+    }
+  ],
+  containers: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'bottle'?", ua: "Як перекладається слово 'bottle'?" },
+      emoji: "🍾",
+      choices: ["бутылка / бутилка", "чашка", "ложка", "коробка"],
+      answer: "бутылка / бутилка"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Коробка, ящик':", ua: "Збери слово 'Коробка, ящик':" },
+      emoji: "📦",
+      answer: "BOX"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: 'Mom bought a ______ of orange juice.'", ua: "Встав слово: 'Mom bought a ______ of orange juice.'" },
+      emoji: "🧃",
+      choices: ["carton", "spoon", "slice", "dozen"],
+      answer: "carton"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Стакан / Склянка':", ua: "Збери слово 'Склянка':" },
+      emoji: "🥛",
+      answer: "GLASS"
+    },
+    {
+      type: "choice",
+      question: { ru: "В чем обычно хранят варенье и мед?", ua: "У чому зазвичай зберігають варення та мед?" },
+      emoji: "🍯",
+      choices: ["in a jar", "in a roll", "on a plate", "in a can"],
+      answer: "in a jar"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Ложка':", ua: "Збери слово 'Ложка':" },
+      emoji: "🥄",
+      answer: "SPOON"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится 'a loaf of bread'?", ua: "Як перекладається 'a loaf of bread'?" },
+      emoji: "🍞",
+      choices: ["буханка хлеба / буханка хліба", "кусок пирога / шматок пирога", "пачка печенья / пачка печива", "плитка шоколада / плитка шоколаду"],
+      answer: "буханка хлеба / буханка хліба"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Корзинка':", ua: "Збери слово 'Корзинка':" },
+      emoji: "🧺",
+      answer: "BASKET"
+    }
+  ],
+  lessons: [
+    {
+      type: "choice",
+      question: { ru: "Какой школьный предмет переводится как 'рисование'?", ua: "Який шкільний предмет перекладається як 'малювання'?" },
+      emoji: "🎨",
+      choices: ["Art", "History", "Math", "Science"],
+      answer: "Art"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Музыка':", ua: "Збери слово 'Музика':" },
+      emoji: "🎵",
+      answer: "MUSIC"
+    },
+    {
+      type: "choice",
+      question: { ru: "На каком уроке ученики бегают, прыгают и играют в мяч?", ua: "На якому уроці учні бігають, стрибають і грають у м'яч?" },
+      emoji: "⚽",
+      choices: ["French", "PE", "Literature", "ICT"],
+      answer: "PE"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'История':", ua: "Збери слово 'Історія':" },
+      emoji: "🏛️",
+      answer: "HISTORY"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится школьный предмет 'ICT'?", ua: "Як перекладається шкільний предмет 'ICT'?" },
+      emoji: "💻",
+      choices: ["информатика / інформатика", "география / географія", "литература / література", "английский / англійська"],
+      answer: "информатика / інформатика"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Математика':", ua: "Збери слово 'Математика':" },
+      emoji: "➗",
+      answer: "MATH"
+    },
+    {
+      type: "choice",
+      question: { ru: "На каком уроке изучают страны, реки и материки?", ua: "На якому уроці вивчають країни, річки та материки?" },
+      emoji: "🗺️",
+      choices: ["Geography", "Music", "Art", "French"],
+      answer: "Geography"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Наука':", ua: "Збери слово 'Наука':" },
+      emoji: "🔬",
+      answer: "SCIENCE"
+    }
+  ],
+  question_words: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится вопросительное слово 'Where'?", ua: "Як перекладається питальне слово 'Where'?" },
+      emoji: "📍",
+      choices: ["де, куди / где, куда", "коли / когда", "хто / кто", "чому / почему"],
+      answer: "де, куди / где, куда"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери вопросительное слово 'КОГДА':", ua: "Збери питальне слово 'КОЛИ':" },
+      emoji: "⏰",
+      answer: "WHEN"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое слово задает вопрос о причине (почему?)?", ua: "Яке слово ставить питання про причину (чому?)?" },
+      emoji: "🤔",
+      choices: ["Why", "Where", "Which", "What"],
+      answer: "Why"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери вопросительное слово 'КТО':", ua: "Збери питальне слово 'ХТО':" },
+      emoji: "👤",
+      answer: "WHO"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: '______ is your favorite teacher?'", ua: "Встав слово: '______ is your favorite teacher?'" },
+      emoji: "❓",
+      choices: ["Who", "Why", "Where", "When"],
+      answer: "Who"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери вопросительное слово 'КАК':", ua: "Збери питальне слово 'ЯК':" },
+      emoji: "💡",
+      answer: "HOW"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как спросить 'Сколько?' (для исчисляемых) на английском?", ua: "Як запитати 'Скільки?' англійською?" },
+      emoji: "🔢",
+      choices: ["How many", "How long", "Which", "Whom"],
+      answer: "How many"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери вопросительное слово 'ЧТО, КАКОЙ':", ua: "Збери питальне слово 'ЩО, ЯКИЙ':" },
+      emoji: "❓",
+      answer: "WHAT"
+    }
+  ],
+  furniture: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'armchair'?", ua: "Як перекладається слово 'armchair'?" },
+      emoji: "🪑",
+      choices: ["стул / стілець", "кресло / крісло", "диван", "кровать / ліжко"],
+      answer: "кресло / крісло"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Диван':", ua: "Збери слово 'Диван':" },
+      emoji: "🛋️",
+      answer: "SOFA"
+    },
+    {
+      type: "choice",
+      question: { ru: "В каком приборе хранят продукты в холоде?", ua: "У якому приладі зберігають продукти у холоді?" },
+      emoji: "🧊",
+      choices: ["wardrobe", "cupboard", "fridge", "bookcase"],
+      answer: "fridge"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Стол':", ua: "Збери слово 'Стіл':" },
+      emoji: "🍽️",
+      answer: "TABLE"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится 'wardrobe'?", ua: "Як перекладається 'wardrobe'?" },
+      emoji: "🚪",
+      choices: ["шкаф для одежды / шафа", "лавка", "зеркало / дзеркало", "раковина"],
+      answer: "шкаф для одежды / шафа"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Зеркало':", ua: "Збери слово 'Дзеркало':" },
+      emoji: "🪞",
+      answer: "MIRROR"
+    },
+    {
+      type: "choice",
+      question: { ru: "В чем моют посуду или руки?", ua: "У чому миють посуд або руки?" },
+      emoji: "🚰",
+      choices: ["sink", "cooker", "bed", "lamp"],
+      answer: "sink"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Подушка':", ua: "Збери слово 'Подушка':" },
+      emoji: "🛏️",
+      answer: "PILLOW"
+    }
+  ],
+  weather: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'earthquake'?", ua: "Як перекладається слово 'earthquake'?" },
+      emoji: "🏚️",
+      choices: ["землетрясение / землетрус", "лавина", "пожар / пожежа", "наводнение / повінь"],
+      answer: "землетрясение / землетрус"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Торнадо':", ua: "Збери слово 'Торнадо':" },
+      emoji: "🌪️",
+      answer: "TORNADO"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое явление означает сход снежной массы с гор?", ua: "Яке явище означає сходження снігу з гори?" },
+      emoji: "🏔️",
+      choices: ["avalanche", "mudslide", "tornado", "tsunami"],
+      answer: "avalanche"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Наводнение / Повінь':", ua: "Збери слово 'Повінь':" },
+      emoji: "🌊",
+      answer: "FLOOD"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как сказать по-английски 'очень морозно, ледяной холод'?", ua: "Як сказати англійською 'морозно'?" },
+      emoji: "🧊",
+      choices: ["freezing", "boiling", "sunny", "humid"],
+      answer: "freezing"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Гроза':", ua: "Збери слово 'Гроза':" },
+      emoji: "⛈️",
+      answer: "THUNDERSTORM"
+    },
+    {
+      type: "choice",
+      question: { ru: "Что означает слово 'drought'?", ua: "Що означає слово 'drought'?" },
+      emoji: "🌵",
+      choices: ["засуха", "град", "туман", "метель / хуртовина"],
+      answer: "засуха"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Метель / Хуртовина':", ua: "Збери слово 'Хуртовина':" },
+      emoji: "🌨️",
+      answer: "BLIZZARD"
+    }
+  ],
+  relationships: [
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'Friendship'?", ua: "Як перекладається слово 'Friendship'?" },
+      emoji: "🤝",
+      choices: ["дружба", "честность / чесність", "доверие / довіра", "прощение / прощення"],
+      answer: "дружба"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Доверие':", ua: "Збери слово 'Довіра':" },
+      emoji: "🔒",
+      answer: "TRUST"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: 'True friends always ______ each other in difficult moments.'", ua: "Встав слово: 'True friends always ______ each other in difficult moments.'" },
+      emoji: "❤️",
+      choices: ["support", "forget", "ignore", "argue"],
+      answer: "support"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Уважение':", ua: "Збери слово 'Повага':" },
+      emoji: "🙌",
+      answer: "RESPECT"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое качество означает правдивость и искренность?", ua: "Яка якість означає правдивість та щирість?" },
+      emoji: "😇",
+      choices: ["Honesty", "Loyalty", "Support", "Friendship"],
+      answer: "Honesty"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Верность / Відданість':", ua: "Збери слово 'Вірність':" },
+      emoji: "🐕",
+      answer: "LOYALTY"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как переводится слово 'Communication'?", ua: "Як перекладається слово 'Communication'?" },
+      emoji: "💬",
+      choices: ["общение / спілкування", "прощение / прощення", "доверие / довіра", "дружба"],
+      answer: "общение / спілкування"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'Прощение':", ua: "Збери слово 'Прощення':" },
+      emoji: "🕊️",
+      answer: "FORGIVENESS"
+    }
+  ],
+  grammar_question_tags: [
+    {
+      type: "choice",
+      question: { ru: "Вставь правильный хвостик: 'It is a cat, ______?'", ua: "Встав правильний хвостик: 'It is a cat, ______?'" },
+      emoji: "🐱",
+      choices: ["isn't it?", "is it?", "aren't it?", "doesn't it?"],
+      answer: "isn't it?"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь правильный хвостик: 'We are happy, ______?'", ua: "Встав правильний хвостик: 'We are happy, ______?'" },
+      emoji: "😊",
+      choices: ["aren't we?", "are we?", "isn't we?", "don't we?"],
+      answer: "aren't we?"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь правильный хвостик: 'Mary can cook, ______?'", ua: "Встав правильний хвостик: 'Mary can cook, ______?'" },
+      emoji: "🍳",
+      choices: ["can't she?", "can she?", "doesn't she?", "can't Mary?"],
+      answer: "can't she?"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь правильный хвостик: 'My mum will work, ______?'", ua: "Встав правильний хвостик: 'My mum will work, ______?'" },
+      emoji: "💼",
+      choices: ["won't she?", "will she?", "doesn't she?", "isn't she?"],
+      answer: "won't she?"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь хвостик для отрицания: 'Children don't read, ______?'", ua: "Встав хвостик для заперечення: 'Children don't read, ______?'" },
+      emoji: "📖",
+      choices: ["do they?", "don't they?", "do children?", "aren't they?"],
+      answer: "do they?"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери отрицательную форму WILL (хвостик будущего времени):", ua: "Збери заперечну форму WILL (хвостик майбутнього часу):" },
+      emoji: "🔮",
+      answer: "WONT"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое местоимение ставится в хвостике вместо 'The dog'?", ua: "Який займенник ставиться у хвостику замість 'The dog'?" },
+      emoji: "🐕",
+      choices: ["it", "he", "they", "dog"],
+      answer: "it"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь хвостик в Present Simple: 'Tom plays football, ______?'", ua: "Встав хвостик у Present Simple: 'Tom plays football, ______?'" },
+      emoji: "⚽",
+      choices: ["doesn't he?", "isn't he?", "don't he?", "plays he?"],
+      answer: "doesn't he?"
+    }
+  ],
+  grammar_too_enough: [
+    {
+      type: "choice",
+      question: { ru: "Вставь слово 'слишком': 'This rope is ______ long.'", ua: "Встав слово 'занадто': 'This rope is ______ long.'" },
+      emoji: "📏",
+      choices: ["too", "enough", "many", "much"],
+      answer: "too"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово 'достаточно': 'Is this room big ______ for all of us?'", ua: "Встав слово 'достатньо': 'Is this room big ______ for all of us?'" },
+      emoji: "🏠",
+      choices: ["enough", "too", "any", "some"],
+      answer: "enough"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как правильно сказать по-английски 'слишком холодный'?", ua: "Як правильно сказати англійською 'занадто холодний'?" },
+      emoji: "🥶",
+      choices: ["too cold", "cold too", "enough cold", "cold enough"],
+      answer: "too cold"
+    },
+    {
+      type: "choice",
+      question: { ru: "Как правильно сказать по-английски 'достаточно дешевый'?", ua: "Як правильно сказати англійською 'достатньо дешевий'?" },
+      emoji: "🏷️",
+      choices: ["cheap enough", "too cheap", "enough cheap", "cheap too"],
+      answer: "cheap enough"
+    },
+    {
+      type: "choice",
+      question: { ru: "Где ставится enough перед существительными (например, milk)?", ua: "Де ставиться enough перед іменниками (наприклад, milk)?" },
+      emoji: "🥛",
+      choices: ["enough milk", "milk enough", "too milk", "milk too"],
+      answer: "enough milk"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери английское слово 'достаточно' (enough):", ua: "Збери англійське слово 'достатньо' (enough):" },
+      emoji: "✅",
+      answer: "ENOUGH"
+    },
+    {
+      type: "choice",
+      question: { ru: "The water is ______ hot to drink right now.", ua: "The water is ______ hot to drink right now." },
+      emoji: "☕",
+      choices: ["too", "enough", "many", "any"],
+      answer: "too"
+    },
+    {
+      type: "choice",
+      question: { ru: "He doesn't have ______ money to buy a new computer.", ua: "He doesn't have ______ money to buy a new computer." },
+      emoji: "💻",
+      choices: ["enough", "too", "many", "some"],
+      answer: "enough"
+    }
+  ],
+  grammar_many_much: [
+    {
+      type: "choice",
+      question: { ru: "С какими существительными используется MANY?", ua: "З якими іменниками вживається MANY?" },
+      emoji: "🚗",
+      choices: ["со исчисляемыми во множественном числе (cars, dogs) / зі злічуваними у множині", "с неисчисляемыми (water, tea) / з незлічуваними", "только с именами собственными", "со всеми существительными без разницы"],
+      answer: "со исчисляемыми во множественном числе (cars, dogs) / зі злічуваними у множині"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь правильное слово: 'There is ______ milk in the bottle.'", ua: "Встав правильне слово: 'There is ______ milk in the bottle.'" },
+      emoji: "🥛",
+      choices: ["much", "many", "too many", "a few"],
+      answer: "much"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь правильное слово: 'There are ______ cars in the street.'", ua: "Встав правильне слово: 'There are ______ cars in the street.'" },
+      emoji: "🚙",
+      choices: ["many", "much", "too much", "any"],
+      answer: "many"
+    },
+    {
+      type: "choice",
+      question: { ru: "Слова 'money' (деньги) и 'time' (время) в английском языке являются:", ua: "Слова 'money' (гроші) та 'time' (час) в англійській мові є:" },
+      emoji: "💰",
+      choices: ["неисчисляемыми (употребляем much) / незлічуваними (вживаємо much)", "исчисляемыми (употребляем many) / злічуваними", "только money исчисляемое", "только time исчисляемое"],
+      answer: "неисчисляемыми (употребляем much) / незлічуваними (вживаємо much)"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое слово вставить: 'How ______ tea do you drink every day?'", ua: "Яке слово вставити: 'How ______ tea do you drink every day?'" },
+      emoji: "🍵",
+      choices: ["much", "many", "too", "any"],
+      answer: "much"
+    },
+    {
+      type: "choice",
+      question: { ru: "Какое слово вставить: 'How ______ sisters do you have?'", ua: "Яке слово вставити: 'How ______ sisters do you have?'" },
+      emoji: "👭",
+      choices: ["many", "much", "enough", "some"],
+      answer: "many"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'MANY' (много для исчисляемых):", ua: "Збери слово 'MANY' (багато для злічуваних):" },
+      emoji: "🐕",
+      answer: "MANY"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'MUCH' (много для неисчисляемых):", ua: "Збери слово 'MUCH' (багато для незлічуваних):" },
+      emoji: "🍯",
+      answer: "MUCH"
+    }
+  ],
+  grammar_some_any: [
+    {
+      type: "choice",
+      question: { ru: "В каких предложениях обычно используется SOME?", ua: "У яких реченнях зазвичай використовується SOME?" },
+      emoji: "➕",
+      choices: ["в утвердительных (+) и вежливых просьбах / у стверджувальних та проханнях", "только в обычных вопросах (?)", "только в отрицаниях (-)", "ни в каких"],
+      answer: "в утвердительных (+) и вежливых просьбах / у стверджувальних та проханнях"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово: 'I have ______ fresh apples in my bag.' (+)", ua: "Встав слово: 'I have ______ fresh apples in my bag.' (+)" },
+      emoji: "🍎",
+      choices: ["some", "any", "much", "too"],
+      answer: "some"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово в вопрос (?): 'Do you have ______ questions?'", ua: "Встав слово у питання (?): 'Do you have ______ questions?'" },
+      emoji: "❓",
+      choices: ["any", "some", "much", "too"],
+      answer: "any"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вставь слово в отрицание (-): 'There isn't ______ milk in the bottle.'", ua: "Встав слово у заперечення (-): 'There isn't ______ milk in the bottle.'" },
+      emoji: "🥛",
+      choices: ["any", "some", "many", "enough any"],
+      answer: "any"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вежливое предложение: 'Would you like ______ tea?'", ua: "Ввічлива пропозиція: 'Would you like ______ tea?'" },
+      emoji: "☕",
+      choices: ["some", "any", "many", "a few"],
+      answer: "some"
+    },
+    {
+      type: "choice",
+      question: { ru: "Вежливая просьба: 'Can I have ______ water, please?'", ua: "Ввічливе прохання: 'Can I have ______ water, please?'" },
+      emoji: "💧",
+      choices: ["some", "any", "many", "much water"],
+      answer: "some"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'SOME':", ua: "Збери слово 'SOME':" },
+      emoji: "✨",
+      answer: "SOME"
+    },
+    {
+      type: "spelling",
+      question: { ru: "Собери слово 'ANY':", ua: "Збери слово 'ANY':" },
+      emoji: "🔍",
+      answer: "ANY"
+    }
   ]
 };
 
@@ -953,10 +1869,21 @@ const ACHIEVEMENTS = [
   { id: "objects_guru", title: { ru: "Знаток вещей", ua: "Знавець речей" }, desc: { ru: "Пройти тест по Дому и Предметам", ua: "Пройти тест по Дому та Предметам" }, emoji: "🎒", condition: (stats) => stats.completedTopics.includes("objects") },
   { id: "hobbies_explorer", title: { ru: "Искатель приключений", ua: "Шукач пригод" }, desc: { ru: "Пройти тест по Увлечениям", ua: "Пройти тест по Захопленням" }, emoji: "🗺️", condition: (stats) => stats.completedTopics.includes("hobbies") },
   { id: "science_genius", title: { ru: "Юный гений", ua: "Юний геній" }, desc: { ru: "Пройти тест по Школе и Науке", ua: "Пройти тест по Школі та Науці" }, emoji: "🧪", condition: (stats) => stats.completedTopics.includes("school") },
-  { id: "grammar_master", title: { ru: "Магистр грамматики", ua: "Магістр граматики" }, desc: { ru: "Пройти грамматический тест", ua: "Пройти граматичний тест" }, emoji: "🧠", condition: (stats) => stats.completedTopics.includes("grammar_tenses") || stats.completedTopics.includes("grammar_articles") },
+  { id: "grammar_master", title: { ru: "Магистр грамматики", ua: "Магістр граматики" }, desc: { ru: "Пройти любой грамматический тест", ua: "Пройти будь-який граматичний тест" }, emoji: "🧠", condition: (stats) => stats.completedTopics.some(t => t.startsWith("grammar_")) },
   { id: "traits_expert", title: { ru: "Психолог", ua: "Психолог" }, desc: { ru: "Пройти тест по Чертам характера", ua: "Пройти тест по Рисах характеру" }, emoji: "🧑‍⚕️", condition: (stats) => stats.completedTopics.includes("traits") },
   { id: "nextmove_sports_champ", title: { ru: "Чемпион Next Move", ua: "Чемпіон Next Move" }, desc: { ru: "Пройти тест по теме Спорт из Next Move", ua: "Пройти тест з теми Спорт із Next Move" }, emoji: "🏅", condition: (stats) => stats.completedTopics.includes("nextmove_sports") },
-  { id: "dict_starter", title: { ru: "Словникарь", ua: "Словникар" }, desc: { ru: "Добавить 5 слов в личный словарь", ua: "Додати 5 слів до особистого словника" }, emoji: "📘", condition: (stats) => (App.state.personalDict ? App.state.personalDict.length >= 5 : false) }
+  { id: "dict_starter", title: { ru: "Словникарь", ua: "Словникар" }, desc: { ru: "Добавить 5 слов в личный словарь", ua: "Додати 5 слів до особистого словника" }, emoji: "📘", condition: (stats) => (App.state.personalDict ? App.state.personalDict.length >= 5 : false) },
+  { id: "professions_pro", title: { ru: "Мастер профессий", ua: "Знавець професій" }, desc: { ru: "Пройти тест по Профессиям", ua: "Пройти тест по Професіях" }, emoji: "🧑‍💼", condition: (stats) => stats.completedTopics.includes("professions") },
+  { id: "containers_master", title: { ru: "Мастер контейнеров", ua: "Майстер контейнерів" }, desc: { ru: "Пройти тест по Контейнерам", ua: "Пройти тест по Контейнерах" }, emoji: "📦", condition: (stats) => stats.completedTopics.includes("containers") },
+  { id: "lessons_expert", title: { ru: "Отличник уроков", ua: "Відмінник уроків" }, desc: { ru: "Пройти тест по Школьным урокам", ua: "Пройти тест по Уроках" }, emoji: "📚", condition: (stats) => stats.completedTopics.includes("lessons") },
+  { id: "questions_guru", title: { ru: "Мастер вопросов", ua: "Майстер питань" }, desc: { ru: "Пройти тест по Вопросительным словам", ua: "Пройти тест по Питальних словах" }, emoji: "❓", condition: (stats) => stats.completedTopics.includes("question_words") },
+  { id: "furniture_master", title: { ru: "Мастер уюта", ua: "Майстер меблів" }, desc: { ru: "Пройти тест по Мебели", ua: "Пройти тест по Меблях" }, emoji: "🛋️", condition: (stats) => stats.completedTopics.includes("furniture") },
+  { id: "weather_expert", title: { ru: "Знаток погоды", ua: "Знавець погоди" }, desc: { ru: "Пройти тест по Погоде", ua: "Пройти тест по Погоді" }, emoji: "🌪️", condition: (stats) => stats.completedTopics.includes("weather") },
+  { id: "relationships_pro", title: { ru: "Мастер отношений", ua: "Майстер стосунків" }, desc: { ru: "Пройти тест по теме Стосунки", ua: "Пройти тест за темою Стосунки" }, emoji: "🤝", condition: (stats) => stats.completedTopics.includes("relationships") },
+  { id: "tags_master", title: { ru: "Мастер хвостиков", ua: "Майстер запитань" }, desc: { ru: "Пройти тест по Разделительным вопросам", ua: "Пройти тест по Розділових запитаннях" }, emoji: "🏷️", condition: (stats) => stats.completedTopics.includes("grammar_question_tags") },
+  { id: "too_enough_pro", title: { ru: "Знаток меры", ua: "Знавець міри" }, desc: { ru: "Пройти тест по теме too и enough", ua: "Пройти тест за темою too та enough" }, emoji: "📏", condition: (stats) => stats.completedTopics.includes("grammar_too_enough") },
+  { id: "many_much_guru", title: { ru: "Гуру исчислений", ua: "Гуру кількості" }, desc: { ru: "Пройти тест по many и much", ua: "Пройти тест по many та much" }, emoji: "🔢", condition: (stats) => stats.completedTopics.includes("grammar_many_much") },
+  { id: "some_any_champ", title: { ru: "Эксперт Some/Any", ua: "Експерт Some/Any" }, desc: { ru: "Пройти тест по some и any", ua: "Пройти тест по some та any" }, emoji: "✨", condition: (stats) => stats.completedTopics.includes("grammar_some_any") }
 ];
 
 // Sound Synthesizer Engine (Web Audio API)

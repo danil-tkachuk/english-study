@@ -298,11 +298,11 @@ main {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--border-radius-lg);
-  padding: 1.5rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 260px;
+  height: 265px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 4px 15px var(--shadow-color);
@@ -333,8 +333,8 @@ main {
 }
 
 .topic-icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,7 +385,7 @@ main {
 }
 
 .topic-progress-container {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .topic-progress-bar {
